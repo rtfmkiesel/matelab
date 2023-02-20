@@ -1,0 +1,23 @@
+draft: false
+brand: "Rivella"
+product: "EnerTea Mate"
+size: 330
+packaging: "PET"
+caffeine: 21
+sugar: 3.4
+ingredients:
+    - "Wasser"
+    - "Mate"
+    - "Zitronen- (CH) und Goldmelisse (CH)"
+    - "Apfelminze (CH)"
+    - "Zitronenthymian (CH)"
+    - "Zitronensaftkonzentrat"
+    - "Rübenzucker"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/rivella/enertea-by-rivella-mate-4x33cl/p/6996900"
+        price: 8.80
+        amount: 4
+        date: 2023-01-12
+        comment: "-"

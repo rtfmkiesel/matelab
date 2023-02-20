@@ -1,0 +1,21 @@
+draft: false
+brand: "Club-Mate"
+product: "Cola"
+size: 500
+packaging: "Glas"
+caffeine: 15
+sugar: 10
+ingredients:
+    - Wasser"
+    - "Glukose-Fructosesirup"
+    - "Zucker"
+    - "Getränkegrundstoff (Mate-Extrakt, Colanuss-Extrakt, Tee-Extrakt, natürliches Aroma, Farbstoff: Zuckerkulör E 150d, Säuerungsmittel: Phosphorsäure)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-cola/"
+        price: 2.60
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

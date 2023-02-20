@@ -1,0 +1,21 @@
+draft: true
+brand: "Vivi Kola"
+product: "Bio Mate & Cascara"
+size: 330
+packaging: Glas
+caffeine: 1 # FIXME
+sugar: 5.25
+ingredients:
+    - "Aufguss aus Matetee und Schwarztee (Wasser, Mate-Tee, Schwarztee) (88%)"
+    - "Bio Zucker"
+    - "Bio Kaffeekirschenextrakt (3%)"
+    - "Bio Zitronensaft (3%)"
+    - "Kohlensäure"
+stores: 
+    -
+        name: "justDrink.ch"
+        url: "https://www.justdrink.ch/softdrinks/vivi-mate-cascara-24x33cl-"
+        price: 51.80
+        amount: 24
+        date: 2023-01-19
+        comment: "-"

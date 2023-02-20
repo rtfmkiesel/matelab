@@ -1,0 +1,36 @@
+draft: false
+brand: "Puerto"
+product: "Mate Zitronengras"
+size: 500
+packaging: "Tetrapak"
+caffeine: 16
+sugar: 2.9
+ingredients:
+    - "Aufguss aus Mate-Tee und Zitronengras (Wasser, Mate-Tee (93%), Zitronengras)"
+    - "Rohrzucker"
+    - "Limettensaft (1,25%) aus Limettensaftkonzentrat"
+    - "Zitronensaft (1,25%) aus Zitronensaftkonzentrat"
+    - "Koffein"
+    - "natürliches Aroma"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/puerto-mate-eistee-zitronengras/"
+        price: 3.60
+        amount: 1
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/ice-tea/puerto-mate-zitronengras/p/7081928"
+        price: 9.60
+        amount: 4
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120248100000"
+        price: 2.20
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

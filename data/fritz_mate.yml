@@ -1,0 +1,28 @@
+draft: false 
+brand: "Fritz-Kola"
+product: "Mate"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 5.2
+ingredients: 
+    - "Natürliches Mineralwasser"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Grüner Mateextrakt"
+    - "Säuerungsmittel Citronensäure"
+    - "Antioxidationsmittel Ascorbinsäure"
+    - "Koffein"
+    - "Farbstoff"
+    - "Ammonsulfit-Zuckerkulör"
+    - "Natürliches Aroma "
+
+stores:
+    -
+        name: "DrinkDirect"
+        url: "https://www.drinkdirect.ch/de/alkoholfrei/mate/fritz-mate"
+        price: 1.80
+        amount: 1
+        date: 2023-01-23
+        comment: "-"
+      

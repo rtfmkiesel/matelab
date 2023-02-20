@@ -1,0 +1,24 @@
+draft: false
+brand: "Volvic"
+product: "Mate Peach"
+size: 450
+packaging: "PET"
+caffeine: 20
+sugar: 4.8
+ingredients:
+    - "Natürliches Mineralwasser Volvic (92%)"
+    - "Zucker"
+    - "Mate-Aufguss (2%)"
+    - "Zitronensaft aus Zitronensaftkonzentrat"
+    - "natürliches Aroma von gelben Pfirsichen"
+    - "Koffein (0,02%)"
+    - "Schwarztee-Extrakt"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/multipacks-unter-1-liter/volvic-mate-peach-6x45cl/p/6966202"
+        price: 13.50
+        amount: 6
+        date: 2023-01-12
+        comment: "-"

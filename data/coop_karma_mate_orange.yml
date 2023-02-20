@@ -1,0 +1,23 @@
+draft: true
+brand: "Coop Karma"
+product: "Mate & Orange"
+size: 500
+packaging: "PET"
+caffeine: 1 # FIXME
+sugar: 3
+ingredients:
+    - "Wasser"
+    - "Apfelsaft 18%"
+    - "Orangensaft 6%"
+    - "Zitronensaft 1,5%"
+    - "Mate"
+    - "Pfefferminze"
+    - "Zitronengras"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/frucht-gemuesesaefte/karma-refresher-mate-orange/p/6722336"
+        price: 2.95
+        amount: 1
+        date: 2023-01-23
+        comment: "-"

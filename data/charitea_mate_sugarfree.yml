@@ -1,0 +1,22 @@
+draft: false
+brand: "ChariTea"
+product: "Mate Ginger Sugar Free"
+size: 330
+packaging: "Glas"
+caffeine: 15
+sugar: 0
+ingredients:
+    - "Bio-Mateteeaufguss (Wasser, Bio-Matetee) (48,3%)"
+    - "Aufguss aus Kräuter-/Früchtetee (Wasser, Bio-Apfelstücke, Bio-Guayusa, Bio-weißer Hibiskus, Bio-Zitronenmyrte, Bio-Süßkraut, Bio-Koffein) (48,2%)"
+    - "Bio-Ingwersaft (2%)"
+    - "Bio-Orangensaft (1,2%)"
+    - "Bio-Zitronensaft (0,3%)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Bio für alle"
+        url: "https://www.biofueralle.ch/getraenke/limonaden-andere-getraenke/11893/charitea-mate-ginger-sugar-free-0-33l"
+        price: 44.40
+        amount: 20
+        date: 2023-01-23
+        comment: "-"

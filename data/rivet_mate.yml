@@ -1,0 +1,27 @@
+draft: false 
+brand: "Rivet"
+product: "Maté"
+size: 330
+packaging: Glas
+caffeine: 21
+sugar: 5
+ingredients: 
+    - "Wasser"
+    - "Zucker"
+    - "natürliches Mate-Aroma (0,6%)"
+    - "Kohlensäure"
+    - "Säuerungsmittel (Zitronensäure)"
+    - "Guarana Extrakt (0,2%)"
+    - "Mate Extrakt (0,2%)"
+    - "karamellisierter Zucker"
+    - "natürliches Koffein"
+
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/rivet-mate/p/6741239"
+        price: 2.80
+        amount: 1
+        date: 2023-01-23
+        comment: "-"
+      

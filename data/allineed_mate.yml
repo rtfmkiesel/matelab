@@ -1,0 +1,22 @@
+draft: true
+brand: "all i need"
+product: "Mate Tea"
+size: 250
+packaging: Can
+caffeine: 20 # FIXME
+sugar: 4.8
+ingredients: 
+    - "91 % Aufguss aus Mate- und Matcha-Tee (Wasser, Mate- und Matcha-Tee)"
+    - "Zucker"
+    - "2 % Zitronensaft"
+    - "1,5 % Maracujasaft"
+    - "Kohlensäure"
+    - "natürliches Maracuja-Aroma"
+stores:
+    -
+        name: "Pepillo"
+        url: "https://www.pepillo.ch/kaufen/all-i-need-mate-tea-24-x-25cl-dose/"
+        price: 49
+        amount: 24
+        date: 2023-01-23
+        comment: "-"

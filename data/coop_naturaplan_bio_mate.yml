@@ -1,0 +1,20 @@
+draft: false
+brand: "Coop Naturaplan"
+product: "Bio Mate"
+size: 500
+packaging: "PET"
+caffeine: 1.2
+sugar: 4
+ingredients:
+    - "Wasser"
+    - "Zucker (Deutschland, Schweiz)"
+    - "Zitronensaft aus Konzentrat"
+    - "Mate"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/ice-tea/ice-tea-spezialitaeten/naturaplan-bio-mate-6x50cl/p/6846982"
+        price: 8.40
+        amount: 6
+        date: 2023-01-12
+        comment: "-"

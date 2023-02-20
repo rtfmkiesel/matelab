@@ -1,0 +1,30 @@
+draft: false
+brand: "Organics by RedBull"
+product: "Viva Mate"
+size: 250
+packaging: "Can"
+caffeine: 14
+sugar: 6.8
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Zitronensaftkonzentrat"
+    - "natürlicher Mate-Extrase (0,33%)"
+    - "natürliche Aromen aus Pflanzenextrakten (0,05%: Zitrone, Koffein aus Kaffeebohnen, Johannisbrot, Vanille)"
+    - "Karamellzuckersirup"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/organics-by-red-bull-mate/p/6598327"
+        price: 10.20
+        amount: 6
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "justDrink.ch"
+        url: "https://www.justdrink.ch/energydrinks/red-bull-organics-viva-mate-24x25cl"
+        price: 39.90
+        amount: 24
+        date: 2023-01-19
+        comment: "-"

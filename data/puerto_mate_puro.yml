@@ -1,0 +1,21 @@
+draft: false
+brand: "Puerto"
+product: "Mate Puro"
+size: 500
+packaging: "Tetrapak"
+caffeine: 16
+sugar: 2.4
+ingredients:
+    - "96.5% Aufguss aus Mate-Tee (Wasser, Mate)"
+    - "Rohrzucker"
+    - "1% Limettensaft aus Limettensaftkonzentrat"
+    - "natürliches Limettenaroma"
+    - "Koffein"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/puerto-mate-eistee-puro/"
+        price: 3.60
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

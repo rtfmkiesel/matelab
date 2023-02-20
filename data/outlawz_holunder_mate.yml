@@ -1,0 +1,24 @@
+draft: true 
+brand: "Outlawz"
+product: "Holunder Mate"
+size: 330
+packaging: Glas
+caffeine: 1 # FIXME
+sugar: 5
+ingredients: 
+    - "Wasser"
+    - "Zucker"
+    - "Holunderblütengrundstoff(Wasser, Zucker, Holnderblüten, Zitronensaftkonzentrat, natürliches Aroma)"
+    - "Kurkuma"
+    - "natürliches Koffein"
+    - "Auszug aus Mate"
+
+stores:
+    -
+        name: "FoodAtHome"
+        url: "https://foodathome.ch/products/kopie-von-outlawz-eistee-matcha-ingwer-330ml"
+        price: 2.80
+        amount: 1
+        date: 2023-01-19
+        comment: "-"
+      

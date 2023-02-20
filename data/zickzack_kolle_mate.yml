@@ -1,0 +1,22 @@
+draft: false
+brand: "ZickZack"
+product: "kolle-mate"
+size: 500
+packaging: Glas
+caffeine: 20
+sugar: 5
+ingredients:
+    - "Wasser"
+    - "Bio-Rübenzucker"
+    - "Kohlensäure"
+    - "frisch aufgebrühte Bio-Mate"
+    - "Säuerungsmittel: Zitronensäure"
+    - "Bio-Koffein"
+stores:
+    -
+        name: "PiffPaff"
+        url: "https://www.piffpaff.ch/kolle-mate-20-x-500ml.html"
+        price: 41.00
+        amount: 20
+        date: 2023-01-23
+        comment: "-"

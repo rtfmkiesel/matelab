@@ -1,0 +1,28 @@
+draft: false
+brand: "Peak Punk"
+product: "Energy Black Tea & Mate"
+size: 500
+packaging: PET
+caffeine: 15
+sugar: 3.7
+ingredients: 
+    - "Aufguss aus Schwarztee (Extraktgehalt: 1.2 g/L)"
+    - "Agavendicksaft"
+    - "Extrakte 0.15% (Guaranaextrakt, Pfefferminzextrakt, Mateextrakt)"
+    - "Säuerungsmittel: Citronensäure"
+    - "natürliche Aromen"
+stores:
+    -
+        name: "Mr. Vegan"
+        url: "https://mrvegan.ch/getraenke/soft-drinks/6976/energy-black-tea-mate-75mg-coffein-bio-500ml-peak-punk"
+        price: 2.80
+        amount: 1
+        date: 2023-01-19
+        comment: "-"
+    -
+        name: "PowerFood"
+        url: "https://www.powerfood.ch/peak-punk-organic-energy-tea-500ml"
+        price: 2.90
+        amount: 1
+        date: 2023-01-19
+        comment: "-"

@@ -1,0 +1,25 @@
+draft: false
+brand: "Thomas Henry Mate Mate"
+product: "Original"
+size: 330
+packaging: Can
+caffeine: 30
+sugar: 5.7
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Agavendicksaft"
+    - "Kohlensäure"
+    - "Säuerungsmittel Citronensäure"
+    - "grüner Mate-teeextrakt (0.12%)"
+    - "Koffein"
+    - "Farbstoff: E150d"
+    - "natürliches Aroma"
+stores:
+    -
+        name: "DrinkDirect"
+        url: "https://www.drinkdirect.ch/de/2006/mate-mate-dose"
+        price: 1.80
+        amount: 1
+        date: 2023-01-23
+        comment: "-"

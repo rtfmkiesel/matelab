@@ -1,0 +1,28 @@
+draft: false
+brand: "ChariTea"
+product: "Mate"
+size: 330
+packaging: "Glas"
+caffeine: 15
+sugar: 4
+ingredients:
+    - "Aufguss aus Bio-Mate- und Schwarztee (Wasser, Mate-, Schwarztee) (88%)"
+    - "Bio-Agavendicksaft"
+    - "Bio-Orangensaft (3%)"
+    - "Bio-Zitronensaft (3%)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/charitea-mate/p/6043082"
+        price: 11.20
+        amount: 4
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120304600000"
+        price: 2.80
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

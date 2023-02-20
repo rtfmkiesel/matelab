@@ -1,0 +1,27 @@
+draft: false
+brand: "Club-Mate"
+product: "Granat"
+size: 500
+packaging: "Glas"
+caffeine: 20
+sugar: 5.3
+ingredients:
+    - "Wasser"
+    - "Glukose-Fructosesirup"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Mate-Tee-Extrakt mit mind. 0,4 g Mate in 100 ml Getränk"
+    - "Granatapfelsaft (1,5%)"
+    - "Säuerungsmittel Zitronensäure"
+    - "Kirschsaftkonzentrat"
+    - "Johannisbeersaft-konzentrat"
+    - "Koffein"
+    - "natürliches Aroma"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-granat/"
+        price: 2.90
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

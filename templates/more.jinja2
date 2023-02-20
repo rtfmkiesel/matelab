@@ -1,0 +1,47 @@
+{% include "header.jinja2" %}
+
+	<head>
+		<title>matelab.ch | The Swiss Mate Index</title>
+	</head>
+	<main>
+		<table id="main" class="display compact" style="width:100%">
+			<thead>
+				<tr>
+					<th>Brand</th>
+					<th>Product</th>
+					<th>Packaging</th>
+					<th>Size (ml)</th>
+					<th>Average Price (CHF)</th>
+					<th>CHF/100ml</th>
+					<th>CHF/1mg Caffeine</th>
+					<th>Caffeine (mg/100ml)</th>
+					<th>Caffeine/Drink (mg)</th>
+					<th>Caff/1g Sugar</th>
+					<th>Sugar (g/100ml)</th>
+					<th>Sugar/Drink (g)</th>
+					<th>Sugar/1mg caff</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in products %}
+				<tr>
+					<td>{{ item["brand"] }}</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a></td>
+					<td>{{ item["packaging"] }}</td>
+					<td>{{ item["size"] }}</td>
+					<td>{{ item["averageprice"] }}</td>
+					<td>{{ item["price100ml"] }}</td>
+					<td>{{ item["price1mgcaffeine"] }}</td>
+					<td>{{ item["caffeine"] }}</td>
+					<td>{{ item["caffeinetotal"] }}</td>
+					<td>{{ item["caffeine1gsugar"] }}</td>
+					<td>{{ item["sugar"] }}</td>
+					<td>{{ item['sugartotal'] }}</td>
+					<td>{{ item["sugar1mgcaffeine"] }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+
+{% include "footer.jinja2" %}

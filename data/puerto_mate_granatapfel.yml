@@ -1,0 +1,37 @@
+draft: false
+brand: "Puerto"
+product: "Mate Granatapfel"
+size: 500
+packaging: "Tetrapak"
+caffeine: 16
+sugar: 2.9
+ingredients:
+    - "Aufguss aus Mate-Tee (Wasser, Mate-Tee (92%))"
+    - "Granatapfelsaft (4%) aus Granatapfelsaftkonzentrat"
+    - "Rohrzucker"
+    - "Aroniasaft (0.5%) aus Aroniasaftkonzentrat"
+    - "Zitronensaft (0.5%) aus Zitronensaftkonzentrat"
+    - "Koffein"
+    - "Aroma"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/puerto-mate-eistee-granatapfel/"
+        price: 3.60
+        amount: 1
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/ice-tea/puerto-mate-granatapfel/p/7081023"
+        price: 9.60
+        amount: 4
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120248000000"
+        price: 2.20
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

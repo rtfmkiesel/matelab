@@ -1,0 +1,21 @@
+draft: false
+brand: "Club-Mate"
+product: "IceT Kraftstoff"
+size: 500
+packaging: "Glas"
+caffeine: 22
+sugar: 7
+ingredients:
+    - "Wasser"
+    - "Glukose-Fructosesirup"
+    - "Zucker"
+    - "Getränkegrundstoff (Mate-Tee-Extrakt mit 0,4 g Mate in 100 ml Getränk, Säuerungsmittel Zitronensäure, Koffein, natürliches Aroma, Farbstoff: Zuckerkulör E150d)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-kraftstoff/"
+        price: 3.00
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

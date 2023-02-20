@@ -1,0 +1,28 @@
+draft: false
+brand: "Peak Punk"
+product: "Energy Green Tea & Mate"
+size: 500
+packaging: PET
+caffeine: 15
+sugar: 3.6
+ingredients: 
+    - "Aufguss aus Grüntee (Extraktgehalt: 1.2 g/L)"
+    - "Agavendicksaft"
+    - "Extrakte 0.3% (Ingwerextrakt, Guaranaextrakt, Mateextrakt)"
+    - "Säuerungsmittel: Citronensäure"
+    - "Antioxidationsmittel: Ascorbinsäure"
+stores:
+    -
+        name: "Mr. Vegan"
+        url: "https://mrvegan.ch/getraenke/soft-drinks/6975/energy-green-tea-mate-75mg-coffein-bio-500ml-peak-punk"
+        price: 2.80
+        amount: 1
+        date: 2023-01-19
+        comment: "-"
+    -
+        name: "PowerFood"
+        url: "https://www.powerfood.ch/peak-punk-organic-energy-tea-500ml/7061-23"
+        price: 2.90
+        amount: 1
+        date: 2023-01-19
+        comment: "-"

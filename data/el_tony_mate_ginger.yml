@@ -1,0 +1,38 @@
+draft: false
+brand: "El Tony"
+product: "Mate & Ginger"
+size: 330
+packaging: "Can"
+caffeine: 23
+sugar: 5.4
+ingredients:
+    - "Wasser"
+    - "Mate-Tee (90%)"
+    - "Ingwer"
+    - "Rohrzucker"
+    - "Zitronensaft (3%) aus Zitronensaftkonzentrat"
+    - "Kohlensäure"
+    - "natürliches Koffein"
+    - "natürliches Aroma"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/el-tony-mate-ginger/"
+        price: 3.00
+        amount: 1
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/el-tony-mate-ginger/p/6116601"
+        price: 11.40
+        amount: 6
+        date: 2023-01-12
+        comment: "Not in all stores"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120214700000"
+        price: 1.90
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

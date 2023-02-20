@@ -1,0 +1,28 @@
+draft: false
+brand: "Biotta"
+product: "Bio Energy Mate & Guarana"
+size: 250
+packaging: Can
+caffeine: 32
+sugar: 7.9
+ingredients:
+    - "Mate-Auszug (Wasser, Mate) (62%)"
+    - "Schwarzer Johannisbeersaft"
+    - "Traubensaft"
+    - "Agavendicksaft"
+    - "Orangensaft"
+    - "Erdbeerpüree"
+    - "Mangopüree"
+    - "Bananenpüree"
+    - "Guaranaextrakt-Pulver (0.1%)"
+    - "natürliches Koffein"
+    - "Brombeerblätterextrakt"
+    - "Vanilleschotenpulver"
+stores: 
+    -
+        name: "Mr. Vegan"
+        url: "https://mrvegan.ch/getraenke/energy-drinks/10475/energy-mate-guarana-bio-250ml-biotta"
+        price: 2.90
+        amount: 1
+        date: 2023-01-19
+        comment: "-"

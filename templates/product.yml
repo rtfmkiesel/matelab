@@ -1,0 +1,26 @@
+draft: true # set to false if all information is filled out
+brand: # ex. "Club-mate"
+product: # ex. "Original"
+size: # size one unit (1 bottle/1 can) in milliliter, ex. 500
+packaging: # type of packaging, ex. can, bottle, pet
+caffeine: # caffeine in milligrams per 100ml, ex. 22
+sugar: # sugar in grams per 100ml, ex. 5
+ingredients: # list of ingredients in original language
+    - "Some"
+    - "Ingredients"
+    - "Here"
+stores: # where to buy
+    -
+        name: # name, ex. "Coop"
+        url: # direct product URL or URL to store (NO REFERRAL LINKS), ex. "https://somesite/products/mate.html"
+        price: # price of the whole package, ex. 11.50
+        amount: # package size, ex. 6
+        date: # date in yyyy-MM-dd when you added the store data, ex 2023-01-01
+        comment: # comment regarding the store, ex. "Only available in bigger stores, Only available during Winter"
+    -
+        name: # name, ex. "Coop"
+        url: # direct product URL or URL to store (NO REFERRAL LINKS), ex. "https://somesite/products/mate.html"
+        price: # price of the whole package, ex. 11.50
+        amount: # package size, ex. 6
+        date: # date in yyyy-MM-dd when you added the store data, ex 2023-01-01
+        comment: # comment regarding the store, ex. "Only available in bigger stores, Only available during Winter"

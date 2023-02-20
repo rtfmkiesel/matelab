@@ -1,0 +1,26 @@
+draft: false
+brand: "Club-Mate"
+product: "Zero"
+size: 500
+packaging: "Glas"
+caffeine: 20
+sugar: 0
+ingredients:
+    - "Wasser"
+    - "Mate-Extrakt"
+    - "Kohlensäure"
+    - "Säuerungsmittel"
+    - "Citronensäure"
+    - "Farbstoff"
+    - "Ammoniumsulfit-Zuckerkulör"
+    - "Koffein"
+    - "natürliches Aroma"
+    - "Süßungsmittel: Acesulfam K, Sucralose"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-zero/"
+        price: 2.90
+        amount: 1 
+        date: 2023-01-19
+        comment: "-"

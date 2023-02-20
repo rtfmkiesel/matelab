@@ -1,0 +1,46 @@
+{% include "header.jinja2" %}
+	<head>
+		<title>{{ item['brand'] }} - {{ item['product'] }} | matelab.ch</title>
+	</head>
+	<main>
+		<h2>{{ item['brand'] }} - {{ item['product'] }}</h2>
+		<h3>Stats</h3>
+		<ul>
+			<li>Size: {{ item['size'] }}ml</li>
+			<li>Packaging: {{ item['packaging'] }}</li>
+			<li>Caffeine: {{ item['caffeine'] }}mg/100ml</li>
+			<li>Sugar: {{ item['sugar'] }}g/100ml</li>
+			<li>Ingredients</li>
+			<ul>{% for ingredient in item['ingredients'] %}
+				<li>{{ ingredient }}</li>{% endfor %}
+			</ul>
+		</ul>
+		<h3>Stores*</h3>
+		<table id="main" class="display compact" style="width:100%">
+			<thead>
+				<tr>
+					<th>Store</th>
+					<th>Price 1 Unit (CHF)</th>
+					<th>Price 1 Pack (CHF)</th>
+					<th>Units per Pack</th>
+					<th>Comment</th>
+					<th>Last modified</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for store in item['stores'] %}<tr>
+					<td><a href="{{ store['url'] }}" target="_blank" rel="noopener noreferrer">{{ store['name'] }}&#8599;</a></td>
+					<td>{{ store['price1u'] }}</td>
+					<td>{{ store['price'] }}</td>
+					<td>{{ store['amount'] }}</td>
+					<td>{{ store['comment'] }}</td>
+					<td>{{ store['date'] }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<br>
+		<i>*No developer behind this site profits from you visiting those links. 'noreferrer' is set.</i>
+    </main>
+
+{% include "footer.jinja2" %}

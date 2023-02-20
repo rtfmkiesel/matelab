@@ -1,0 +1,32 @@
+draft: false
+brand: "Thomas Henry Mate Mate"
+product: "Original"
+size: 500
+packaging: Glas
+caffeine: 30
+sugar: 5.7
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Agavendicksaft"
+    - "Kohlensäure"
+    - "Säuerungsmittel Citronensäure"
+    - "grüner Mate-teeextrakt (0.12%)"
+    - "Koffein"
+    - "Farbstoff: E150d"
+    - "natürliches Aroma"
+stores:
+    -
+        name: "Pepillo"
+        url: "https://www.pepillo.ch/kaufen/mate-mate-thomas-henry-20-x-50cl-mw-flasche/"
+        price: 49
+        amount: 20
+        date: 2023-01-23
+        comment: "-"
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/thomas-henry-mate-mate-2/"
+        price: 3.30
+        amount: 1
+        date: 2023-01-23
+        comment: "-"

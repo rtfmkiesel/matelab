@@ -1,0 +1,37 @@
+draft: false
+brand: "El Tony"
+product: "Mate & Guarana"
+size: 330
+packaging: "Can"
+caffeine: 23
+sugar: 5.8
+ingredients:
+    - "Wasser"
+    - "Mate-Tee 90%"
+    - "Rohrzucker"
+    - "Zitronensaft (3%) aus Zitronensaftkonzentrat"
+    - "Kohlensäure"
+    - "Guaranaextrakt (0.1%)"
+    - "Aroma"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/el-tony-mate-guarana/"
+        price: 3.00
+        amount: 1
+        date: 2023-01-12
+        comment: "-"
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/el-tony-mate/p/5865164"
+        price: 11.40
+        amount: 6
+        date: 2023-01-12
+        comment: "Not in all stores"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120214600000"
+        price: 1.90
+        amount: 1
+        date: 2023-01-12
+        comment: "-"

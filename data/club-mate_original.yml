@@ -1,0 +1,21 @@
+draft: false
+brand: "Club-Mate"
+product: "Original"
+size: 500
+packaging: "Glas"
+caffeine: 20
+sugar: 5
+ingredients: 
+    - "Wasser"
+    - "Glukose-Fructosesirup"
+    - "Zucker"
+    - "Getränkegrundstoff (Mate-Tee-Extrakt mit 0.4g Mate in 100ml Getränk, Säurungsmittel, Citronensäure, karamellisierter Zuckersirup, Koffein, natürliches Aroma)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-eistee/"
+        price: 2.90
+        amount: 1
+        date: 2023-01-12
+        comment: "-"
