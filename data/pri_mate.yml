@@ -1,0 +1,19 @@
+draft: true 
+brand: "Pri"
+product: "Mate"
+size: 330
+packaging: Bottle
+caffeine: 20 # FIXME
+sugar: 5 # FIXME
+ingredients: # FIXME
+    - "Some" 
+    - "Ingredients"
+    - "Here"
+stores:
+    -
+        name: "Pri-mate.ch"
+        url: "https://pri-mate.ch/product/pri-mate-still"
+        price: 70.00
+        amount: 24
+        date: 2023-05-03
+        comment: "-"

@@ -1,0 +1,19 @@
+draft: true 
+brand: "Migros Ice Tea"
+product: "Mate"
+size: 500
+packaging: PET
+caffeine: 20 # FIXME
+sugar: 5 # FIXME
+ingredients: # FIXME
+    - "Some" 
+    - "Ingredients"
+    - "Here"
+stores:
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/en/product/120293500000"
+        price: 1.20
+        amount: 1
+        date: 2023-05-03
+        comment: "-"

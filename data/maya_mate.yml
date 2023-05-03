@@ -1,0 +1,19 @@
+draft: true 
+brand: "Maya"
+product: "Mate"
+size: 330
+packaging: Can
+caffeine: 20 # FIXME
+sugar: 5 # FIXME
+ingredients: # FIXME
+    - "Some"
+    - "Ingredients"
+    - "Here"
+stores:
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/en/product/120202500000"
+        price: 1.95
+        amount: 1
+        date: 2023-05-03
+        comment: "-"
