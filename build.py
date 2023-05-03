@@ -119,6 +119,7 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
         with open(f"{OUTPUT_DIR}/products/{site_url}", "w") as product_out:
             product_out.write(product_template.render(item=product_yaml))
 
+    print(f"[+] Rendererd {len(products)} products")
     return products
 
 
