@@ -4,7 +4,7 @@ product: "Mate"
 size: 500
 packaging: PET
 caffeine: 20 # FIXME
-sugar: 5 # FIXME
+sugar: 6.1
 ingredients: # FIXME
     - "Some" 
     - "Ingredients"

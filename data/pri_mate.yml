@@ -4,11 +4,11 @@ product: "Mate"
 size: 330
 packaging: Bottle
 caffeine: 20 # FIXME
-sugar: 5 # FIXME
-ingredients: # FIXME
-    - "Some" 
-    - "Ingredients"
-    - "Here"
+sugar: 4
+ingredients:
+    - "93.5% Aufguss aus Bio-Mate (Wasser, Bio-Mate aus Brasilien)" 
+    - "Bio Zucker"
+    - "Bio Zitronensaft"
 stores:
     -
         name: "Pri-mate.ch"
