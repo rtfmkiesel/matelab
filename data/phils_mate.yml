@@ -1,14 +1,15 @@
 draft: true
 brand: "Phil's"
 product: "Bio Matetee mit Limette"
-size: 500 # FIXME
+size: 500
 packaging: PET
 caffeine: 20 # FIXME
-sugar: 5 # FIXME
-ingredients: # FIXME
-    - "Some" 
-    - "Ingredients"
-    - "Here"
+sugar: 6.1
+ingredients:
+    - "Aufguss aus Matetee (90%)" 
+    - "Rohrzucker"
+    - "Limettensaft aus Konzentrat"
+    - "Natürliche Aromen"
 stores: # FIXME
     -
         name: "" # FIXME

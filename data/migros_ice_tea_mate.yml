@@ -5,10 +5,10 @@ size: 500
 packaging: PET
 caffeine: 20 # FIXME
 sugar: 6.1
-ingredients: # FIXME
-    - "Some" 
-    - "Ingredients"
-    - "Here"
+ingredients:
+    - "Aufguss aus Mate (Extraktgehalt 2,1g/l)" 
+    - "Zucker"
+    - "Säuerungsmittel Citronensäure"
 stores:
     -
         name: "Migros"
