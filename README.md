@@ -10,7 +10,6 @@ This project needs price data from as many stores as possible. Please submit dat
 |--------------------------|-------------------------------------------|--------------------------------------------------------|
 | all i need mate tea      | Caffeine                                  |                                                        |
 | Coop Karma Mate & Orange | Caffeine                                  |                                                        |
-| Maya Mate                | Caffeine, Sugar, Ingredients              |                                                        |
 | Migros Ice Tea Mate      | Caffeine, Ingredients                     |                                                        |
 | Outlawz Holunder Mate    | Caffeine                                  | Needs manual testing, manufacturer  did not measure it |
 | Phil's Matetee           | Size, Caffeine, Sugar, Ingredients, Store |                                                        |

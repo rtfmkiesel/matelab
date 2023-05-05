@@ -1,14 +1,21 @@
-draft: true 
+draft: false 
 brand: "Maya"
 product: "Mate"
 size: 330
 packaging: Can
-caffeine: 20 # FIXME
-sugar: 5 # FIXME
-ingredients: # FIXME
-    - "Some"
-    - "Ingredients"
-    - "Here"
+caffeine: 21,5
+sugar: 5
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Mate-Extrakt (0.14%)"
+    - "Säuerungsmittel"
+    - "Zitronensäure"
+    - "Natürliches Matearoma"
+    - "Antioxidationsmittel Ascorbinsäure"
+    - "Koffein"
+    - "Farbstoff Ammonsulfit-Zuckerkulör"
 stores:
     -
         name: "Migros"
