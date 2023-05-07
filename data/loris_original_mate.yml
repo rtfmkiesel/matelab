@@ -1,0 +1,20 @@
+draft: false 
+brand: "Lori's"
+product: "Original Mate"
+size: 330
+packaging: Glas
+caffeine: 19
+sugar: 3.4
+ingredients:
+    - "Kalter Aufguss aus Mate und Schwarztee (95%)
+    - "Zucker"
+    - "Zitronensaft"
+    - "Kohlensäure"
+stores:
+    -
+        name: "INTER COMESTIBLES"
+        url: "https://shop.intercomestibles.ch/sortiment/details/1520/lori's-mate"
+        price: 55.20
+        amount: 24
+        date: 2023-05-07
+        comment: "-"

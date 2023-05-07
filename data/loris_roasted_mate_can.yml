@@ -1,0 +1,27 @@
+draft: false 
+brand: "Lori's"
+product: "Roasted Mate"
+size: 330
+packaging: Can
+caffeine: 25
+sugar: 3.4
+ingredients:
+    - "Kalter Aufguss aus geröstetem und grünem Mate (95%)
+    - "Zucker"
+    - "Zitronensaft"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produit/loris-mate-roasted"
+        price: 3.70
+        amount: 1
+        date: 2023-05-07
+        comment: "-"
+    -
+        name: "Koffeinshop"
+        url: "https://koffeinshop.ch/products/24-loris-roasted-mate-in-der-dose"
+        price: 42.15
+        amount: 24
+        date: 2023-05-07
+        comment: "-"

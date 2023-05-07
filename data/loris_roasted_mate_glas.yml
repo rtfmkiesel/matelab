@@ -1,0 +1,20 @@
+draft: false 
+brand: "Lori's"
+product: "Roasted Mate"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 3.4
+ingredients:
+    - "Kalter Aufguss aus geröstetem und grünem Mate (95%)
+    - "Zucker"
+    - "Zitronensaft"
+    - "Kohlensäure"
+stores:
+    -
+        name: "INTER COMESTIBLES"
+        url: "https://shop.intercomestibles.ch/sortiment/details/2243/lori's-roasted-mate"
+        price: 55.20
+        amount: 24
+        date: 2023-05-07
+        comment: "-"
