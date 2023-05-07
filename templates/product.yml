@@ -2,7 +2,7 @@ draft: true # set to false if all information is filled out
 brand: # ex. "Club-mate"
 product: # ex. "Original"
 size: # size one unit (1 bottle/1 can) in milliliter, ex. 500
-packaging: # type of packaging, ex. Can/Glas/PET
+packaging: # type of packaging, {Can/Glas/PET/Tetrapak}
 caffeine: # caffeine in milligrams per 100ml, ex. 22
 sugar: # sugar in grams per 100ml, ex. 5
 ingredients: # list of ingredients in original language
