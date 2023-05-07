@@ -1,0 +1,22 @@
+draft: false 
+brand: "Brio Maté"
+product: "Pear Morning Blend"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 6
+ingredients:
+    - "Water"
+    - "Pear"
+    - "Apple"
+    - "Sugar"
+    - "Lemon juice"
+    - "Maté extract"
+stores:
+    -
+        name: "Brio Mate"
+        url: "https://www.brio-mate.com/product-page/pear-morning-blend-glass-33cl-x-12"
+        price: 42.00
+        amount: 12
+        date: 2023-05-07
+        comment: "-"

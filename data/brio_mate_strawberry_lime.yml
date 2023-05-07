@@ -1,0 +1,23 @@
+draft: false 
+brand: "Brio Maté"
+product: "Strawberry & Lime"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 3.5
+ingredients:
+    - "Water"
+    - "Sugar"
+    - "Lemon juice"
+    - "Maté extract"
+    - "Carrot Concentrate"
+    - "Natural strawberry and lime aromas"
+    - "CO2"
+stores:
+    -
+        name: "Brio Mate"
+        url: "https://www.brio-mate.com/product-page/strawberry-lime"
+        price: 34.80
+        amount: 12
+        date: 2023-05-07
+        comment: "-"

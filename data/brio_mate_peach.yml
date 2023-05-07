@@ -1,0 +1,21 @@
+draft: false 
+brand: "Brio Maté"
+product: "Peach Non-Carbonated"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 3.5
+ingredients:
+    - "Infusion of black tea and rose hips"
+    - "Sugar"
+    - "Lemon juice"
+    - "Maté extract"
+    - "Natural flavors"
+stores:
+    -
+        name: "Brio Mate"
+        url: "https://www.brio-mate.com/product-page/peach"
+        price: 34.80
+        amount: 12
+        date: 2023-05-07
+        comment: "-"
