@@ -95,7 +95,7 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
         product_yaml.update(
             {
                 "sugar1mgcaffeine": "0",
-                "caffeine1gsugar": "0",
+                #"caffeine1gsugar": "0",
                 "sugartotal": "0",
             }
         )
@@ -106,8 +106,8 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
             product_yaml.update({"sugar1mgcaffeine": round2(product_sugar1mgcaffeine)})
 
             # caffeine1gsugar
-            product_caffeine1gsugar = product_yaml["caffeine"] / product_yaml["sugar"]
-            product_yaml.update({"caffeine1gsugar": round2(product_caffeine1gsugar)})
+            #product_caffeine1gsugar = product_yaml["caffeine"] / product_yaml["sugar"]
+            #product_yaml.update({"caffeine1gsugar": round2(product_caffeine1gsugar)})
 
             # total sugar in product
             product_sugartotal = product_yaml["sugar"] * (product_yaml["size"] / 100)
