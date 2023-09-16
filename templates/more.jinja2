@@ -8,7 +8,6 @@
 		<table id="main" class="display compact" style="width:100%">
 			<thead>
 				<tr>
-					<th>Brand</th>
 					<th>Product</th>
 					<th>&#8709; Price (CHF)</th>
 					<th>Price/100ml (CHF)</th>
@@ -23,8 +22,7 @@
 			<tbody>
 				{% for item in products %}
 				<tr>
-					<td>{{ item["brand"] }}</td>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
 					<td>{{ item["averageprice"] }}</td>
 					<td>{{ item["price100ml"] }}</td>
 					<td>{{ item["caffeine"] }}</td>

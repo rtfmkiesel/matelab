@@ -20,7 +20,7 @@ This project needs price data from as many stores as possible. Please submit dat
 | Vivi Cola Mate & Cascara | Caffeine         | Needs manual testing, manufacturer  did not measure it |
 
 ## Contributing
-Existing products can be found under `./data`. The template for a new product is located at `./templates/product.yml`. To change or add data you can submit pull requests. Also feel free to add yourself to the `README.md` and the `CONTRIBUTORS` file. 
+Existing products can be found under `./data`. The template for a new product is located at `./templates/product.yml`. To change or add data you can submit pull requests. Also feel free to add yourself to the `README.md`. 
 
 If you're not a GitHub user you can contact me and I'll update the data accordingly. Please also send your source (URL, picture of beverage) for me to verify the data.
 

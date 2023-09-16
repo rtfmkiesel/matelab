@@ -2,13 +2,12 @@
 
 	<main>
 		<div>
-			Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. There are <a href="/more.html">more statistics available</a>.
+			Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. There are <a href="/more.html">more statistics available</a>. This site and data is <a href="https://github.com/rtfmkiesel/matelab">open source</a>. Feel free to contribute &#128151;
 		</div>
 		<br>
 		<table id="main" class="display compact" style="width:100%">
 			<thead>
 				<tr>
-					<th>Brand</th>
 					<th>Product</th>
 					<th>Caffeine (mg/100ml)</th>
 					<th>Caffeine Total (mg)</th>
@@ -18,8 +17,7 @@
 			</thead>
 			<tbody>
 				{% for item in products %}<tr>
-					<td>{{ item["brand"] }}</td>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
 					<td>{{ item["caffeine"] }}</td>
 					<td>{{ item["caffeinetotal"] }}</td>
 					<td>{{ item["sugar"] }}</td>
@@ -28,10 +26,6 @@
 				{% endfor %}
 			</tbody>
 		</table>
-		<h3>Contributors</h3>
-        <ul>{% for contributor in contributors %}
-            <li><a href="{{ contributor.split(";")[1] }}" target="_blank">{{ contributor.split(";")[0] }}</a></li>
-        {% endfor %}</ul>
 	</main>
 
 {% include "footer.jinja2" %}
