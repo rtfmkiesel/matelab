@@ -126,16 +126,12 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
 def render_index(env: jinja2.Environment, products: Iterable[Dict]):
     print("[+] Rendering 'index.html'")
     main_template = env.get_template("main.jinja2")
-    # load all the contributors
-    with open(f"{SCRIPT_DIR}/CONTRIBUTORS") as contributors_raw:
-        contributors = contributors_raw.readlines()[1:]
 
     # render index.html
     with open(f"{OUTPUT_DIR}/index.html", "w") as main_out:
         main_out.write(
             main_template.render(
                 products=products,
-                contributors=contributors,
             )
         )
 
