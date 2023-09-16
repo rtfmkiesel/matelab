@@ -1,4 +1,7 @@
 # matelab.ch
+
+![](static/logo.png)
+
 This is the repository for [matelab.ch](https://matelab.ch), a community driven site about [mate-based](https://en.wikipedia.org/wiki/Mate_(drink)) beverages and caffeine based competitors available in Switzerland.
 
 ## Missing data
@@ -26,6 +29,5 @@ If you're not a GitHub user you can contact me and I'll update the data accordin
 + [@SigristFabian](https://twitter.com/SigristFabian)
 + [@volerysandro](https://twitter.com/volerysandro)
 
-## Code Kudos
-+ [sindresorhus/github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
+## Kudos
 + [piskelapp/piskel](https://github.com/piskelapp/piskel/)
