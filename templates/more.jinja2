@@ -10,32 +10,26 @@
 				<tr>
 					<th>Brand</th>
 					<th>Product</th>
-					<th>Packaging</th>
-					<th>Size (ml)</th>
-					<th>Average Price (CHF)</th>
-					<th>CHF/100ml</th>
-					<th>CHF/1mg Caffeine</th>
+					<th>&#8709; Price (CHF)</th>
+					<th>Price/100ml (CHF)</th>
 					<th>Caffeine (mg/100ml)</th>
-					<th>Caffeine/Drink (mg)</th>
-					<th>Caff/1g Sugar</th>
+					<th>Caffeine Total (mg)</th>
+					<th>Price/1mg Caffeine (CHF)</th>
 					<th>Sugar (g/100ml)</th>
-					<th>Sugar/Drink (g)</th>
-					<th>Sugar/1mg caff</th>
+					<th>Sugar Total (g)</th>
+					<th>Sugar/1mg Caffeine (g)</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for item in products %}
 				<tr>
 					<td>{{ item["brand"] }}</td>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a></td>
-					<td>{{ item["packaging"] }}</td>
-					<td>{{ item["size"] }}</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
 					<td>{{ item["averageprice"] }}</td>
 					<td>{{ item["price100ml"] }}</td>
-					<td>{{ item["price1mgcaffeine"] }}</td>
 					<td>{{ item["caffeine"] }}</td>
 					<td>{{ item["caffeinetotal"] }}</td>
-					<td>{{ item["caffeine1gsugar"] }}</td>
+					<td>{{ item["price1mgcaffeine"] }}</td>
 					<td>{{ item["sugar"] }}</td>
 					<td>{{ item['sugartotal'] }}</td>
 					<td>{{ item["sugar1mgcaffeine"] }}</td>

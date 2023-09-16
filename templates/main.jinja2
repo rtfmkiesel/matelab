@@ -1,11 +1,8 @@
 {% include "header.jinja2" %}
 
-	<head>
-		<title>matelab.ch | The Swiss Mate Index</title>
-	</head>
 	<main>
 		<div>
-			Below is a table of {{ products|length }} <a href="https://en.wikipedia.org/wiki/Mate_(drink)" target="_blank" rel="noopener noreferrer">mate-based&#8599;</a> beverages and caffeine based competitors available in Switzerland. There are <a href="/more.html">more statistics available</a>.
+			Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. There are <a href="/more.html">more statistics available</a>.
 		</div>
 		<br>
 		<table id="main" class="display compact" style="width:100%">
@@ -13,22 +10,16 @@
 				<tr>
 					<th>Brand</th>
 					<th>Product</th>
-					<th>Packaging</th>
-					<th>Size (ml)</th>
-					<th>Average Price (CHF)</th>
 					<th>Caffeine (mg/100ml)</th>
-					<th>Caffeine/Drink (mg)</th>
+					<th>Caffeine Total (mg)</th>
 					<th>Sugar (g/100ml)</th>
-					<th>Sugar/Drink (g)</th>
+					<th>Sugar Total (g)</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for item in products %}<tr>
 					<td>{{ item["brand"] }}</td>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a></td>
-					<td>{{ item["packaging"] }}</td>
-					<td>{{ item["size"] }}</td>
-					<td>{{ item["averageprice"] }}</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
 					<td>{{ item["caffeine"] }}</td>
 					<td>{{ item["caffeinetotal"] }}</td>
 					<td>{{ item["sugar"] }}</td>
