@@ -1,9 +1,9 @@
-draft: true 
+draft: false 
 brand: "Migros Ice Tea"
 product: "Mate"
 size: 500
 packaging: PET
-caffeine: 20 # FIXME
+caffeine: 21
 sugar: 6.1
 ingredients:
     - "Aufguss aus Mate (Extraktgehalt 2,1g/l)" 

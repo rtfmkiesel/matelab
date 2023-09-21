@@ -1,20 +1,20 @@
-draft: true
+draft: false
 brand: "Phil's"
 product: "Bio Matetee mit Limette"
 size: 500
 packaging: PET
-caffeine: 20 # FIXME
+caffeine: 22
 sugar: 6.1
 ingredients:
     - "Aufguss aus Matetee (90%)" 
     - "Rohrzucker"
     - "Limettensaft aus Konzentrat"
     - "Natürliche Aromen"
-stores: # FIXME
+stores:
     -
-        name: "" # FIXME
-        url: "" # FIXME
-        price: 1.95 # FIXME
-        amount: 1 # FIXME
-        date: 2023-05-03 # FIXME
-        comment: "-" # FIXME
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120239100000"
+        price: 1.95 
+        amount: 1 
+        date: 2023-09-20
+        comment: "-"

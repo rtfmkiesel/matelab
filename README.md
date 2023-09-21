@@ -16,11 +16,8 @@ This project needs price data from as many stores as possible. Please submit dat
 |--------------------------|------------------|--------------------------------------------------------|
 | all i need mate tea      | Caffeine         |                                                        |
 | Coop Karma Mate & Orange | Caffeine         |                                                        |
-| Migros Ice Tea Mate      | Caffeine         | Needs manual testing, manufacturer  did not measure it |
 | Outlawz Holunder Mate    | Caffeine         | Needs manual testing, manufacturer  did not measure it |
-| Phil's Matetee           | Caffeine, Stores |                                                        |
 | Pri Mate                 | Caffeine         |                                                        |
-| Vivi Cola Mate & Cascara | Caffeine         | Needs manual testing, manufacturer  did not measure it |
 
 ## Contributors
 + [@rtfmkiesel](https://twitter.com/rtfmkiesel)

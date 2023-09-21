@@ -1,9 +1,9 @@
-draft: true
+draft: false
 brand: "Vivi Kola"
 product: "Bio Mate & Cascara"
 size: 330
 packaging: Glas
-caffeine: 1 # FIXME
+caffeine: 19
 sugar: 5.25
 ingredients:
     - "Aufguss aus Matetee und Schwarztee (Wasser, Mate-Tee, Schwarztee) (88%)"
