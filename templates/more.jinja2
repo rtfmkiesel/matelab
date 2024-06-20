@@ -2,39 +2,40 @@
 
 	<main>
 		<div>
-			Here are all statistics. <b>Please note that this page is not made for mobile devices.</b>
+			<p> Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. This site and data is <a href="https://github.com/rtfmkiesel/matelab" target="_blank">open source</a>.</p>
 		</div>
-		<br>
-		<table id="main" class="display compact" style="width:100%">
-			<thead>
-				<tr>
-					<th>Product</th>
-					<th>&#8709; Price (CHF)</th>
-					<th>Price/100ml (CHF)</th>
-					<th>Caffeine (mg/100ml)</th>
-					<th>Caffeine Total (mg)</th>
-					<th>Price/1mg Caffeine (CHF)</th>
-					<th>Sugar (g/100ml)</th>
-					<th>Sugar Total (g)</th>
-					<th>Sugar/1mg Caffeine (g)</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for item in products %}
-				<tr>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
-					<td>{{ item["averageprice"] }}</td>
-					<td>{{ item["price100ml"] }}</td>
-					<td>{{ item["caffeine"] }}</td>
-					<td>{{ item["caffeinetotal"] }}</td>
-					<td>{{ item["price1mgcaffeine"] }}</td>
-					<td>{{ item["sugar"] }}</td>
-					<td>{{ item['sugartotal'] }}</td>
-					<td>{{ item["sugar1mgcaffeine"] }}</td>
-				</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+		<div class="hscroll">
+			<table id="main" class="display compact">
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>&#8709; Price (CHF)</th>
+						<th>Price/100ml (CHF)</th>
+						<th>Caffeine (mg/100ml)</th>
+						<th>Caffeine Total (mg)</th>
+						<th>Price/1mg Caffeine (CHF)</th>
+						<th>Sugar (g/100ml)</th>
+						<th>Sugar Total (g)</th>
+						<th>Sugar/1mg Caffeine (g)</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in products %}
+					<tr>
+						<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
+						<td>{{ item["averageprice"] }}</td>
+						<td>{{ item["price100ml"] }}</td>
+						<td>{{ item["caffeine"] }}</td>
+						<td>{{ item["caffeinetotal"] }}</td>
+						<td>{{ item["price1mgcaffeine"] }}</td>
+						<td>{{ item["sugar"] }}</td>
+						<td>{{ item['sugartotal'] }}</td>
+						<td>{{ item["sugar1mgcaffeine"] }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</main>
 
 {% include "footer.jinja2" %}

@@ -1,9 +1,11 @@
 @font-face {
-	font-family: "HandwrittenSans";
-	src: url(/handwritten_sans.ttf);
+	font-family: "Roboto Mono";
+	src: url("/RobotoMono-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
-/* light mode, default */
 :root {
 	--foreground: #111;
 	--background: #fdfdfd;
@@ -11,54 +13,63 @@
 }
 
 html {
-	font-size: 22px;
-	line-height: 1.7;
-	overflow-y: scroll; /* always show the scroll bar */
-	overflow-x: hidden;
+	font-family: "Roboto Mono", monospace;
+	padding: 3em 1em;
+	margin: auto;
+	line-height: 1.75;
+	font-size: 1.25em;
 	color: var(--foreground);
 	background-color: var(--background);
 }
 
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground: #dddddd;
-		--background: #1a1a1a;
-		--accent: #ff0000;
-	}	
-}
-
-body,
-p,
-h1,
-h2,
-h3 {
-	margin: 0;
-	padding: 0;
-	margin-bottom: 15px;
-}
-
 body {
-	font-family: "HandwrittenSans", Arial, Helvetica, sans-serif;
-	text-rendering: optimizeLegibility;
 	max-width: 95%;
-	margin: 60px auto 90px auto;
+	margin: 0 auto;
 }
 
 header {
-	text-align: center;
-	margin: 30px auto 60px auto;
+	margin: 0 auto 2em auto;
 }
 
-header h1 {
-	font-size: 200%;
+#header-container,
+#header-text {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+#header-text {
+	font-size: medium;
+	flex-direction: column;
+	margin-left: 1em;
+}
+
+#header-text h1 {
+	margin: 0;
+}
+
+table {
+	width: 100%;
+	border: 1px solid var(--foreground);
+}
+
+th,
+td {
+	border: 1px solid var(--foreground);
+	padding: 5px;
+	text-align: left;
+}
+
+tbody tr:hover {
+	background-color: #f5f5f5;
 }
 
 a,
 a:active {
 	color: var(--foreground);
 	text-decoration: underline;
-	text-decoration-thickness: 2px;
 	text-decoration-color: var(--accent);
 }
 
@@ -66,12 +77,8 @@ a:hover {
 	text-decoration-color: var(--foreground);
 }
 
-table, th, td {
-	border: 1px solid var(--foreground);
-}
-
-th, td {
-	padding: 5px;
+.hscroll {
+	overflow-x: auto;
 }
 
 /* mobile view */

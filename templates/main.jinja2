@@ -2,10 +2,12 @@
 
 	<main>
 		<div>
-			Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. There are <a href="/more.html">more statistics available</a>. This site and data is <a href="https://github.com/rtfmkiesel/matelab">open source</a>. Feel free to contribute &#128151;
+			<p> Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. This site and data is <a href="https://github.com/rtfmkiesel/matelab" target="_blank">open source</a>.</p>
+			
+			<p>There are <a href="/more.html">more statistics available</a>.</p>
 		</div>
-		<br>
-		<table id="main" class="display compact" style="width:100%">
+		<div class="hscroll">
+			<table id="main" class="display compact">
 			<thead>
 				<tr>
 					<th>Product</th>
@@ -26,6 +28,7 @@
 				{% endfor %}
 			</tbody>
 		</table>
+		</div>
 	</main>
 
 {% include "footer.jinja2" %}
