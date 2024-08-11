@@ -1,0 +1,31 @@
+draft: false
+brand: "ok.-"
+product: "Mate"
+size: 330
+packaging: Can
+caffeine: 21
+sugar: 5.8
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Mateblätter-Extrakt (0.4%)"
+    - "Säuerungsmittel Citronensäure"
+    - "Karamelisierter Zucker"
+    - "Natürliches Aroma"
+    - "Koffein (0.02%)"
+stores:
+    -
+        name: "avec/k kiosk/Press & Books"
+        url: "https://avec.ch/de/angebot/promotionen/ok-mate-birthday-2292?lang=de"
+        price: 2
+        amount: 1
+        date: 2024-08-11
+        comment: ""
+    -
+        name: "okpunktstrich.ch"
+        url: "https://www.okpunktstrich.ch/de/produkte/ok-mate-birthday-2292?lang=de"
+        price: 2
+        amount: 1
+        date: 2024-08-11
+        comment: ""
