@@ -1,0 +1,29 @@
+draft: false
+brand: "Club-Mate"
+product: "Beere"
+size: 500
+packaging: "Glas"
+caffeine: 20
+sugar: 5.1
+ingredients: 
+    - "Wasser"
+    - "Zucker"
+    - "Mate-Extrakt"
+    - "Kohlensäure"
+    - "Säuerungsmittel Citronensäure"
+    - "Färbendes Lebensmittel (Konzentrat aus Karote und Hibiskus)"
+    - "Holundersaftkonzentrat"
+    - "Himbeersaftkonzentrat"
+    - "natürliche Aromen"
+    - "Koffein"
+    - "Brombeersaftkonzentrat"
+    - "Heidelbeersaftkonzentrat"
+    
+stores:
+    -
+        name: "Drinks of the World"
+        url: "https://beerworld.ch/produkt/club-mate-beere/"
+        price: 2.90
+        amount: 1
+        date: 2024-11-20
+        comment: "-"
