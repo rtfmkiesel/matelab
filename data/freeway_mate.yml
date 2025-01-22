@@ -1,0 +1,21 @@
+draft: false
+brand: "Freeway"
+product: "Mate"
+size: 330
+packaging: "Can"
+caffeine: 10
+sugar: 5.5
+ingredients:
+    - "Aufguss aus Mate (Wasser, Mate)"
+    - "Zucker"
+    - "Zitronensaft aus Konzentrat"
+    - "Kohlensäure"
+    - "Guaranaextrakt"
+stores:
+    -
+        name: "Lidl"
+        url: "https://sortiment.lidl.ch/de/mate-5112704"
+        price: 0.99
+        amount: 1
+        date: 2025-01-22
+        comment: "-"
