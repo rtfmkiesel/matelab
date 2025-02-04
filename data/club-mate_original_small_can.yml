@@ -1,0 +1,21 @@
+draft: false
+brand: "Club-Mate"
+product: "Original"
+size: 330
+packaging: "Can"
+caffeine: 20
+sugar: 5
+ingredients: 
+    - "Wasser"
+    - "Glukose-Fructosesirup"
+    - "Zucker"
+    - "Getränkegrundstoff (Mate-Tee-Extrakt mit 0.4g Mate in 100ml Getränk, Säuerungsmittel, Citronensäure, karamellisierter Zuckersirup, Koffein, natürliches Aroma)"
+    - "Kohlensäure"
+stores:
+    -
+        name: "ottos.ch"
+        url: "https://www.ottos.ch/de/supermarkt-weine/getraenke/soft-drinks/club-mate-dose-33-cl/p/422365"
+        price: 42.00
+        amount: 24
+        date: 2025-02-04
+        comment: "-"
