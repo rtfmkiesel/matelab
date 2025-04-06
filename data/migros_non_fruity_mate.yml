@@ -1,0 +1,25 @@
+draft: false
+brand: "Migros NON"
+product: "Fruity Mate"
+size: 330
+packaging: Glas
+caffeine: 25
+sugar: 5.8
+ingredients:
+    - "Bier alkoholfrei 50% (Wasser, Gerstenmalz, Hopfen)"
+    - "Wasser"
+    - "Apfelsaftkonzentrat"
+    - "Rhabarbersaftkonzentrat"
+    - "Zitronensaftkonzentrat"
+    - "Mateextrakt"
+    - "Karottenkonzentrat färbend"
+    - "Koffein"
+    - "Rhabarberaroma"
+stores:
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/121339900000"
+        price: 8.70
+        amount: 6
+        date: 2025-04-06
+        comment: ""
