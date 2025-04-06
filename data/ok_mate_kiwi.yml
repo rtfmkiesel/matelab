@@ -1,23 +1,23 @@
 draft: false
 brand: "ok.-"
-product: "mate"
+product: "mate kiwi gold"
 size: 330
 packaging: Can
-caffeine: 21
+caffeine: 22
 sugar: 5.8
 ingredients:
     - "Wasser"
     - "Zucker"
     - "Kohlensäure"
-    - "Mateblätter-Extrakt (0.4%)"
+    - "Mateblätter-Extrakt (0,5%)"
     - "Säuerungsmittel Citronensäure"
-    - "Karamelisierter Zucker"
+    - "Karamellisierter Zucker"
     - "natürliches Aroma"
-    - "Koffein (0.02%)"
+    - "Koffein (0,02%)"
 stores:
     -
         name: "okpunktstrich.ch"
-        url: "https://www.okpunktstrich.ch/de/produkte/ok-mate-2249?lang=de"
+        url: "https://www.okpunktstrich.ch/de/produkte/ok-mate-kiwigold-2598?lang=de"
         price: 2
         amount: 1
         date: 2025-04-06
