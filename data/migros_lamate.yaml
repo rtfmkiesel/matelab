@@ -1,0 +1,25 @@
+draft: false
+brand: "Migros"
+product: "Lamate"
+size: 330
+packaging: "Dose"
+caffeine: 15
+sugar: 6
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Aroma"
+    - "Säuerungsmittel: Citronensäure"
+    - "Caramelzuckersirup"
+    - "Koffein"
+    - "Antioxidationsmittel: Ascorbinsäure"
+    - "Mateextrakt 0.02%"
+    - "Kohlensäure"
+stores:
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120906200000"
+        price: 1.0
+        amount: 1
+        date: 2025-07-04
+        comment: "-"
