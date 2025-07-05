@@ -23,6 +23,7 @@ This project needs price data from as many stores as possible. Please submit dat
 + [@rtfmkiesel](https://twitter.com/rtfmkiesel)
 + [@SigristFabian](https://twitter.com/SigristFabian)
 + [@volerysandro](https://twitter.com/volerysandro)
++ [@SvBrunner](https://github.com/SvBrunner)
 
 ## Kudos
 + [piskelapp/piskel](https://github.com/piskelapp/piskel/)
