@@ -39,7 +39,8 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
     product_template = env.get_template("product.jinja2")
 
     # process every ./products/product.yaml file
-    for product_filepath in glob.iglob(f"{DATA_DIR}/*.yml"):
+    product_filepaths = glob.glob(f"{DATA_DIR}/*.yml") + glob.glob(f"{DATA_DIR}/*.yaml")
+    for product_filepath in product_filepaths:
         # convert yaml to dict
         with open(product_filepath) as product_raw:
             product_yaml = yaml.safe_load(product_raw)
