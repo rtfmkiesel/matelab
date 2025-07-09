@@ -1,4 +1,5 @@
 draft: true # set to false if all information is filled out
+discontinued: true # set to true if the product is no loger available
 brand: # ex. "Club-mate"
 product: # ex. "Original"
 size: # size one unit (1 bottle/1 can) in milliliter, ex. 500

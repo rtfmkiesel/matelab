@@ -2,9 +2,7 @@
 
 	<main>
 		<div>
-			<p> Below is a sortable table of {{ products|length }} mate-based beverages available in Switzerland. This site and data is <a href="https://github.com/rtfmkiesel/matelab" target="_blank">open source</a>.</p>
-			
-			<p>There are <a href="/more.html">more statistics available</a>.</p>
+			<p>Below is a sortable table of {{ products|length }} mate-based beverages from Switzerland. This table includes both currently available and discontinued drinks. This site and its data are <a href="https://github.com/rtfmkiesel/matelab" target="_blank">open source</a>. There are <a href="/more.html">more statistics</a> available.</p>
 		</div>
 		<div class="hscroll">
 			<table id="main" class="display compact">
@@ -19,7 +17,7 @@
 			</thead>
 			<tbody>
 				{% for item in products %}<tr>
-					<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
+					<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}}{% if item['discontinued'] %}, NA{% endif %})</td>
 					<td>{{ item["caffeine"] }}</td>
 					<td>{{ item["caffeinetotal"] }}</td>
 					<td>{{ item["sugar"] }}</td>

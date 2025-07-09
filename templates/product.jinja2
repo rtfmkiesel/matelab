@@ -15,6 +15,9 @@
 				<li>{{ ingredient }}</li>{% endfor %}
 			</ul>
 		</ul>
+		{% if item['discontinued'] %}
+		<p><b>This product is no longer available. :(</b></p>
+		{% else %}
 		<h3>Stores*</h3>
 		<div class="hscroll">
 			<table id="main" class="display compact">
@@ -43,6 +46,7 @@
 		</div>
 		<br>
 		<i>*No contributor behind this site profits from you visiting those links. 'noreferrer' is set.</i>
+		{% endif %}
     </main>
 
 {% include "footer.jinja2" %}
