@@ -7,7 +7,8 @@ This is the repository for [matelab.ch](https://matelab.ch), a community-driven 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Contributors
-+ [@rtfmkiesel](https://twitter.com/rtfmkiesel)
-+ [@SigristFabian](https://twitter.com/SigristFabian)
-+ [@volerysandro](https://twitter.com/volerysandro)
-+ [@SvBrunner](https://github.com/SvBrunner)
++ [rtfmkiesel](https://x.com/rtfmkiesel)
++ [SigristFabian](https://x.com/SigristFabian)
++ [volerysandro](https://x.com/volerysandro)
++ [SvBrunner](https://github.com/SvBrunner)
++ [bananagogo](https://github.com/bananagogo)
