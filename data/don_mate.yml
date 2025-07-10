@@ -1,0 +1,25 @@
+draft: false
+discontinued: false
+brand: "ALDI SUISSE"
+product: "Don Mate"
+size: 330
+packaging: "Can"
+caffeine: 21
+sugar: 5.8
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Kohlensäure"
+    - "Mateblätter-Extrakt (0.4%)"
+    - "Natürliches Aroma"
+    - "Koffein (0.02%)"
+    - "Säuerungsmittel: Citronensäure"
+    - "Farbstoff: Zuckerkulör"
+stores:
+    -
+        name: "Aldi Suisse"
+        url: https://www.aldi-now.ch/de/don-mate/00-8931640705025
+        price: 0.99
+        amount: 1
+        date: 2025-07-09
+        comment: "-"
