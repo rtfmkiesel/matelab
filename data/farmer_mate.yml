@@ -1,0 +1,25 @@
+draft: false
+discontinued: false
+brand: "Farmer"
+product: "Mate"
+size: 330
+packaging: Can
+caffeine: 23
+sugar: 5.8
+ingredients:
+    - "Wasser"
+    - "Zucker"
+    - "Zitronensaft aus Konzentrat 3%"
+    - "Yerba Mate-Extrakt 0.7%"
+    - "Kohlensäure"
+    - "Guaranasamenextrakt"
+    - "natürliches Mateblätter Aroma"
+    - "Konservierungsstoff: Kaliumsorbat"
+stores:
+    -
+        name: "Landi" 
+        url: "https://www.landi.ch/shop/softdrinks_200105/farmer-mate-6-33-cl_103976"
+        price: 5.95 
+        amount: 6
+        date: 2025-07-15
+        comment: "-" 
