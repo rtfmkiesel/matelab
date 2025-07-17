@@ -1,41 +1,62 @@
 {% include "header.jinja2" %}
 
-	<main>
-		<div>
-			<p>Below is a sortable table of {{ products|length }} mate-based beverages from Switzerland. This table includes both currently available and discontinued drinks. This site and its data are <a href="https://github.com/rtfmkiesel/matelab" target="_blank">open source</a>.</p>
-		</div>
-		<div class="hscroll">
-			<table id="main" class="display compact">
-				<thead>
-					<tr>
-						<th>Product</th>
-						<th>&#8709; Price (CHF)</th>
-						<th>Price/100ml (CHF)</th>
-						<th>Caffeine (mg/100ml)</th>
-						<th>Caffeine Total (mg)</th>
-						<th>Price/1mg Caffeine (CHF)</th>
-						<th>Sugar (g/100ml)</th>
-						<th>Sugar Total (g)</th>
-						<th>Sugar/1mg Caffeine (g)</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for item in products %}
-					<tr>
-						<td><a href="/products/{{ item['siteurl'] }}">{{ item["brand"] }} {{ item["product"] }}</a> ({{ item["size"] }}ml {{ item["packaging"]}})</td>
-						<td>{{ item["averageprice"] }}</td>
-						<td>{{ item["price100ml"] }}</td>
-						<td>{{ item["caffeine"] }}</td>
-						<td>{{ item["caffeinetotal"] }}</td>
-						<td>{{ item["price1mgcaffeine"] }}</td>
-						<td>{{ item["sugar"] }}</td>
-						<td>{{ item['sugartotal'] }}</td>
-						<td>{{ item["sugar1mgcaffeine"] }}</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-	</main>
+<div class="table-container">
+	<table id="more-table" class="display compact">
+		<thead>
+			<tr>
+				<th>Product</th>
+				<th class="numeric">Avg Price<br><small>(CHF)</small></th>
+				<th class="numeric">Price/100ml<br><small>(CHF)</small></th>
+				<th class="numeric">Caffeine<br><small>(mg/100ml)</small></th>
+				<th class="numeric">Caffeine Total<br><small>(mg)</small></th>
+				<th class="numeric">Price/1mg Caffeine<br><small>(CHF)</small></th>
+				<th class="numeric">Sugar<br><small>(g/100ml)</small></th>
+				<th class="numeric">Sugar Total<br><small>(g)</small></th>
+				<th class="numeric">Sugar/1mg Caffeine<br><small>(g)</small></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in products %}
+			<tr{% if item.discontinued %} class="discontinued"{% endif %}>
+				<td>
+					<a href="/products/{{ item['siteurl'] }}" class="product-link">
+						{{ item["brand"] }} {{ item["product"] }}
+					</a>
+					<div class="product-meta">
+						{{ item["size"] }}ml {{ item["packaging"] }}
+						{% if item.discontinued %} • No longer available{% endif %}
+					</div>
+				</td>
+				<td class="numeric">{{ item["averageprice"] }}</td>
+				<td class="numeric">{{ item["price100ml"] }}</td>
+				<td class="numeric">{{ item["caffeine"] }}</td>
+				<td class="numeric">{{ item["caffeinetotal"] }}</td>
+				<td class="numeric">{{ item["price1mgcaffeine"] }}</td>
+				<td class="numeric">{{ item["sugar"] }}</td>
+				<td class="numeric">{{ item['sugartotal'] }}</td>
+				<td class="numeric">{{ item["sugar1mgcaffeine"] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<script>
+$(document).ready(function() {
+	$('#more-table').DataTable({
+		pageLength: 25,
+		order: [[5, 'asc']], // Sort by price per caffeine by default
+		columnDefs: [
+			{ targets: [1, 2, 3, 4, 5, 6, 7, 8], className: 'numeric' }
+		],
+		scrollX: true,
+		language: {
+			search: "Search products:",
+			lengthMenu: "Show _MENU_ products per page",
+			info: "Showing _START_ to _END_ of _TOTAL_ products"
+		}
+	});
+});
+</script>
 
 {% include "footer.jinja2" %}

@@ -1,52 +1,73 @@
 {% include "header.jinja2" %}
-	<head>
-		<title>{{ item['brand'] }} - {{ item['product'] }} | matelab.ch</title>
-	</head>
-	<main>
-		<h2>{{ item['brand'] }} - {{ item['product'] }}</h2>
-		<h3>Stats</h3>
-		<ul>
-			<li>Size: {{ item['size'] }}ml</li>
-			<li>Packaging: {{ item['packaging'] }}</li>
-			<li>Caffeine: {{ item['caffeine'] }}mg/100ml</li>
-			<li>Sugar: {{ item['sugar'] }}g/100ml</li>
-			<li>Ingredients</li>
-			<ul>{% for ingredient in item['ingredients'] %}
-				<li>{{ ingredient }}</li>{% endfor %}
-			</ul>
-		</ul>
-		{% if item['discontinued'] %}
-		<p><b>This product is no longer available. :(</b></p>
-		{% else %}
-		<h3>Stores*</h3>
-		<div class="hscroll">
-			<table id="main" class="display compact">
-				<thead>
-					<tr>
-						<th>Store</th>
-						<th>Price 1 Unit (CHF)</th>
-						<th>Price 1 Pack (CHF)</th>
-						<th>Units per Pack</th>
-						<th>Comment</th>
-						<th>Last modified</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for store in item['stores'] %}<tr>
-						<td><a href="{{ store['url'] }}" target="_blank" rel="noopener noreferrer">{{ store['name'] }}&#8599;</a></td>
-						<td>{{ store['price1u'] }}</td>
-						<td>{{ store['price'] }}</td>
-						<td>{{ store['amount'] }}</td>
-						<td>{{ store['comment'] }}</td>
-						<td>{{ store['date'] }}</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-		<br>
-		<i>*No contributor behind this site profits from you visiting those links. 'noreferrer' is set.</i>
-		{% endif %}
-    </main>
+
+<h2>{{ item['brand'] }} - {{ item['product'] }}</h2>
+
+<div class="stats-grid">
+	<div class="stat-card">
+		<h4>Size</h4>
+		<div class="value">{{ item['size'] }}ml</div>
+	</div>
+	<div class="stat-card">
+		<h4>Packaging</h4>
+		<div class="value">{{ item['packaging'] }}</div>
+	</div>
+	<div class="stat-card">
+		<h4>Caffeine</h4>
+		<div class="value">{{ item['caffeine'] }}mg/100ml</div>
+	</div>
+	<div class="stat-card">
+		<h4>Total Caffeine</h4>
+		<div class="value">{{ item['caffeinetotal'] }}mg</div>
+	</div>
+	<div class="stat-card">
+		<h4>Sugar</h4>
+		<div class="value">{{ item['sugar'] }}g/100ml</div>
+	</div>
+	<div class="stat-card">
+		<h4>Total Sugar</h4>
+		<div class="value">{{ item['sugartotal'] }}g</div>
+	</div>
+</div>
+
+<h3>Ingredients</h3>
+<ul>
+	{% for ingredient in item['ingredients'] %}
+	<li>{{ ingredient }}</li>
+	{% endfor %}
+</ul>
+
+{% if item['discontinued'] %}
+<p><strong>This product is no longer available. :(</strong></p>
+{% else %}
+<h3>Stores*</h3>
+<div class="table-container">
+	<table class="display compact">
+		<thead>
+			<tr>
+				<th>Store</th>
+				<th class="numeric">Price 1 Unit (CHF)</th>
+				<th class="numeric">Price 1 Pack (CHF)</th>
+				<th class="numeric">Units per Pack</th>
+				<th>Comment</th>
+				<th>Last modified</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for store in item['stores'] %}
+			<tr>
+				<td><a href="{{ store['url'] }}" target="_blank" rel="noopener noreferrer">{{ store['name'] }}↗</a></td>
+				<td class="numeric">{{ store['price1u'] }}</td>
+				<td class="numeric">{{ store['price'] }}</td>
+				<td class="numeric">{{ store['amount'] }}</td>
+				<td>{{ store['comment'] }}</td>
+				<td>{{ store['date'] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<br>
+<em>*No contributor behind this site profits from you visiting those links. 'noreferrer' is set.</em>
+{% endif %}
 
 {% include "footer.jinja2" %}
