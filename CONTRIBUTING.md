@@ -1,7 +1,5 @@
 # Contributing
 
-Feel free to add yourself to the [README.md](README.md) when making changes. 
-
 **Adding new data**
 
 + For new products, copy the template from `templates/product.yml` into `data`. 
@@ -20,11 +18,11 @@ Feel free to add yourself to the [README.md](README.md) when making changes.
 + If a product is no longer available, set `discontinued` to `true` but **do not remove store links**
 + Edit the file and submit your changes via a pull request. Please also send your source (URL, picture of beverage) for me to verify the data.
 
-### Missing data
+## Missing data
 
 | Product                  | Data     | Comment                                                |
 |--------------------------|----------|--------------------------------------------------------|
 | all i need mate tea      | Caffeine |                                                        |
 | Coop Karma Mate & Orange | Caffeine |                                                        |
-| Outlawz Holunder Mate    | Caffeine | Needs manual testing; manufacturer did not measure it |
+| Outlawz Holunder Mate    | Caffeine | Needs manual testing; manufacturer did not measure it  |
 | Pri Mate                 | Caffeine |                                                        |
