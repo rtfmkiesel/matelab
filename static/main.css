@@ -24,7 +24,7 @@
 	--space-half: calc(var(--space-default) / 2);
 	--space-double: calc(var(--space-default) * 2);
 
-	--site-max-width: 1500px;
+	--site-max-width: 90rem;
 
 	--fs-large: 2em;
 	--fs-regular: 1.1em;
@@ -196,5 +196,24 @@ div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
 		--bg: #111;
 		--accent: #00ff00;
 		--border: #ddd;
+	}
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px) {
+	:root {
+		--fs-large: 1.5em;
+		--fs-regular: 0.9em;
+		--fs-small: 0.75em;
+	}
+
+	header {
+		flex-direction: column;
+		gap: var(--space-default);
+	}
+
+	div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+		text-align: left;
 	}
 }
