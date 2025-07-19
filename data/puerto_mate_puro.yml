@@ -19,3 +19,17 @@ stores:
         amount: 1
         date: 2023-01-12
         comment: "-"
+    -
+        name: "Migros"
+        url: "https://www.migros.ch/de/product/120248800000"
+        price: 2.20
+        amount: 1
+        date: 2025-07-19
+        comment: "-"
+    -
+        name: "Coop"
+        url: "https://www.coop.ch/de/lebensmittel/getraenke/soft-drinks/cola-limonaden/uebrige-limonaden/puerto-mate%C2%AE-bio--mate-puro/p/7137570"
+        price: 8.80
+        amount: 4
+        date: 2025-07-19
+        comment: "-"
