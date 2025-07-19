@@ -15,12 +15,11 @@
 			{% for item in products %}
 			<tr{% if item.discontinued %} class="discontinued"{% endif %}>
 				<td>
-					<a href="/products/{{ item['siteurl'] }}" class="product-link">
+					<a href="/products/{{ item['siteurl'] }}">
 						{{ item["brand"] }} {{ item["product"] }}
 					</a>
-					<div class="product-meta">
-						{{ item["size"] }}ml {{ item["packaging"] }}
-						{% if item.discontinued %} • No longer available{% endif %}
+					<div>
+						{{ item["size"] }}ml {{ item["packaging"] }}{% if item.discontinued %}; No longer available{% endif %}
 					</div>
 				</td>
 				<td class="numeric">{{ item["caffeine"] }}</td>
@@ -36,21 +35,15 @@
 <script>
 $(document).ready(function() {
 	$('#main-table').DataTable({
-		pageLength: 25,
 		order: [[1, 'desc']], // Sort by caffeine by default
 		columnDefs: [
 			{ targets: [1, 2, 3, 4], className: 'numeric' }
 		],
+		scrollX: false,
+		paging: false,
+		bInfo: false,
 		language: {
 			search: "Search:",
-			lengthMenu: "Show _MENU_ beverages per page",
-			info: "Showing _START_-_END_ of _TOTAL_",
-			paginate: {
-				first: "First",
-				last: "Last",
-				next: "Next",
-				previous: "Previous"
-			}
 		}
 	});
 });

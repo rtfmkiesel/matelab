@@ -9,6 +9,7 @@
 				<th class="numeric">Price/100ml<br><small>(CHF)</small></th>
 				<th class="numeric">Caffeine<br><small>(mg/100ml)</small></th>
 				<th class="numeric">Caffeine Total<br><small>(mg)</small></th>
+				<th class="numeric">Caffeine/1g Sugar<br><small>(mg)</small></th>
 				<th class="numeric">Price/1mg Caffeine<br><small>(CHF)</small></th>
 				<th class="numeric">Sugar<br><small>(g/100ml)</small></th>
 				<th class="numeric">Sugar Total<br><small>(g)</small></th>
@@ -19,18 +20,18 @@
 			{% for item in products %}
 			<tr{% if item.discontinued %} class="discontinued"{% endif %}>
 				<td>
-					<a href="/products/{{ item['siteurl'] }}" class="product-link">
+					<a href="/products/{{ item['siteurl'] }}">
 						{{ item["brand"] }} {{ item["product"] }}
 					</a>
-					<div class="product-meta">
-						{{ item["size"] }}ml {{ item["packaging"] }}
-						{% if item.discontinued %} • No longer available{% endif %}
+					<div>
+						{{ item["size"] }}ml {{ item["packaging"] }}{% if item.discontinued %}; No longer available{% endif %}
 					</div>
 				</td>
 				<td class="numeric">{{ item["averageprice"] }}</td>
 				<td class="numeric">{{ item["price100ml"] }}</td>
 				<td class="numeric">{{ item["caffeine"] }}</td>
 				<td class="numeric">{{ item["caffeinetotal"] }}</td>
+				<td class="numeric">{{ item["caffeine1gsugar"] }}</td>
 				<td class="numeric">{{ item["price1mgcaffeine"] }}</td>
 				<td class="numeric">{{ item["sugar"] }}</td>
 				<td class="numeric">{{ item['sugartotal'] }}</td>
@@ -44,16 +45,15 @@
 <script>
 $(document).ready(function() {
 	$('#more-table').DataTable({
-		pageLength: 25,
-		order: [[5, 'asc']], // Sort by price per caffeine by default
+		order: [[6, 'asc']], // Sort by price / 1mg caffeine by default
 		columnDefs: [
-			{ targets: [1, 2, 3, 4, 5, 6, 7, 8], className: 'numeric' }
+			{ targets: [1, 2, 3, 4, 5, 6, 7, 8, 9], className: 'numeric' }
 		],
-		scrollX: true,
+		scrollX: false,
+		paging: false,
+		bInfo: false,
 		language: {
-			search: "Search products:",
-			lengthMenu: "Show _MENU_ products per page",
-			info: "Showing _START_ to _END_ of _TOTAL_ products"
+			search: "Search:",
 		}
 	});
 });

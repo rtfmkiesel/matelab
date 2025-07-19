@@ -8,12 +8,12 @@
 	<meta name="theme-color" content="#fdfdfd">
 	<meta name="robots" content="index,follow">
 	
-	<meta name=author content="matelab.ch">
-	<meta name=description content="The Swiss Mate Index">
+	<meta name=author content="matelab.ch - The Swiss Mate Index">
+	<meta name=description content="Compare mate-based beverages">
 	<meta name=keywords content="mate, mate tea Switzerland, yerba mate, caffeine, caffeine comparison, caffeine content, koffein, energy drinks, Swiss beverages, Swiss, Switzerland, Schweiz, mate prices, price, preis, Swiss drinks index">
 		
-	<meta property="og:title" content="matelab.ch">
-	<meta property="og:description" content="The Swiss Mate Index">
+	<meta property="og:title" content="matelab.ch - The Swiss Mate Index">
+	<meta property="og:description" content="Compare mate-based beverages">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://matelab.ch/">
 	<meta property="og:image" content="https://matelab.ch/logo_meta.png">
@@ -21,19 +21,19 @@
 	<meta property="og:site_name" content="matelab.ch">
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="matelab.ch">
-	<meta name="twitter:description" content="The Swiss Mate Index">
+	<meta name="twitter:title" content="matelab.ch - The Swiss Mate Index">
+	<meta name="twitter:description" content="Compare mate-based beverages">
 	<meta name="twitter:image" content="https://matelab.ch/logo_meta.png">
 
 	<link rel=canonical href="https://matelab.ch">
 	<link rel=icon type=image/x-icon href=/logo.ico>
-	<link href="/main.css" rel="stylesheet">
 
 	<link rel="preload" href="/RobotoMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-	<link href="/jquery.dataTables.min.css" rel="stylesheet">
-	<script src="/jquery-3.7.0.min.js"></script>
-	<script src="/jquery.dataTables.min.js"></script>
+	<script src="/jquery-3.7.1.min.js"></script>
+	<script src="/datatables.min.js"></script>
+	<link href="/datatables.min.css" rel="stylesheet">
+	<link href="/main.css" rel="stylesheet">
 </head>
 <body>
 	<main>
@@ -54,8 +54,8 @@
 				</a>
 			</div>
 			<script>
-			// Detect page for nav menu highlighting
 			document.addEventListener('DOMContentLoaded', function() {
+				// Detect page for nav menu highlighting
 				const currentPath = window.location.pathname;
 				const navLinks = document.querySelectorAll('.nav-link');
 				
@@ -68,6 +68,14 @@
 						link.classList.add('active');
 					}
 				});
+
+				// Apply dark mode to data tables
+				// https://datatables.net/manual/styling/dark-mode#Auto-detection
+				let prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				let html = document.querySelector('html');
+				
+				html.classList.add(prefers);
+				html.setAttribute('data-bs-theme', prefers);
 			});
 		</script>
 		</header>
