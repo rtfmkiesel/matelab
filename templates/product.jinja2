@@ -36,12 +36,12 @@
 	{% endfor %}
 </ul>
 
+<h3>Stores</h3>
 {% if item['discontinued'] %}
 <p><strong>This product is no longer available. :(</strong></p>
 {% else %}
-<h3>Stores*</h3>
 <div class="table-container">
-	<table class="display compact">
+	<table id="product-table" class="display compact">
 		<thead>
 			<tr>
 				<th>Store</th>
@@ -67,7 +67,23 @@
 	</table>
 </div>
 <br>
-<em>*No contributor behind this site profits from you visiting those links. 'noreferrer' is set.</em>
+<em>No contributor behind this site profits from you visiting those links. 'noreferrer' is set.</em>
+
+<script>
+$(document).ready(function() {
+	$('#product-table').DataTable({
+		order: [[0, 'asc']], // sort by name by default
+		columnDefs: [
+			{ targets: [1, 2, 3, 4], className: 'numeric' }
+		],
+		scrollX: false,
+		paging: false,
+		bInfo: false,
+		searching: false,
+	});
+});
+</script>
+
 {% endif %}
 
 {% include "footer.jinja2" %}

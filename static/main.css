@@ -18,7 +18,7 @@
 	--fg-dull: #6b6b6b;
 	--bg: #fdfdfd;
 	--accent: #ff0000;
-	--border: #ddd;
+	--border: #a5a5a5;
 
 	--space-default: 1.25rem;
 	--space-half: calc(var(--space-default) / 2);
@@ -67,6 +67,14 @@ main {
 	margin: 0 auto;
 }
 
+h1,h2,h3,h4 {
+	margin: var(--space-double) 0;
+}
+
+ul,ol {
+	margin-left: var(--space-double);
+}
+
 a,
 a:active {
 	color: var(--fg);
@@ -102,6 +110,7 @@ a:hover {
 }
 
 #header-left h1 {
+	margin: 0;
 	font-size: var(--fs-large);
 }
 
@@ -156,7 +165,27 @@ div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
 
 /* product page */
 
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: var(--space-default);
+	margin: var(--space-default) 0;
+}
 
+.stat-card {
+	text-align: center;
+	border: 1px solid var(--border);
+	border-radius: var(--border-radius);
+	padding: var(--space-default);
+}
+
+.stat-card h4 {
+	margin: 0;
+}
+
+.stat-card .value {
+	color: var(--accent);
+}
 
 /* dark mode */
 
