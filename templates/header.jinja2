@@ -8,36 +8,74 @@
 	<meta name="theme-color" content="#fdfdfd">
 	<meta name="robots" content="index,follow">
 	
-	<meta name=author content="matelab.ch">
-	<meta name=description content="The Swiss Mate Index">
-	<meta name=keywords content="mate,index,price,preis,caffeine,koffein,swiss,switzerland,schweiz">
+	<meta name=author content="matelab.ch - The Swiss Mate Index">
+	<meta name=description content="Compare mate-based beverages">
+	<meta name=keywords content="mate, mate tea Switzerland, yerba mate, caffeine, caffeine comparison, caffeine content, koffein, energy drinks, Swiss beverages, Swiss, Switzerland, Schweiz, mate prices, price, preis, Swiss drinks index">
 		
-	<meta property="og:title" content="matelab.ch">
-	<meta property="og:description" content="The Swiss Mate Index">
+	<meta property="og:title" content="matelab.ch - The Swiss Mate Index">
+	<meta property="og:description" content="Compare mate-based beverages">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://matelab.ch/">
-	<meta property="og:image" content="https://matelab.ch/logo.png">
+	<meta property="og:image" content="https://matelab.ch/logo_meta.png">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:site_name" content="matelab.ch">
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="matelab.ch">
-	<meta name="twitter:description" content="The Swiss Mate Index">
-	<meta name="twitter:image" content="https://matelab.ch/logo.png">
+	<meta name="twitter:title" content="matelab.ch - The Swiss Mate Index">
+	<meta name="twitter:description" content="Compare mate-based beverages">
+	<meta name="twitter:image" content="https://matelab.ch/logo_meta.png">
 
 	<link rel=canonical href="https://matelab.ch">
 	<link rel=icon type=image/x-icon href=/logo.ico>
-	<link href="/main.css" rel="stylesheet">
-	<link href="/jquery.dataTables.min.css" rel="stylesheet">
 
-	<script src="/jquery-3.7.0.min.js"></script>
-	<script src="/jquery.dataTables.min.js"></script>
+	<link rel="preload" href="/RobotoMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+	<script src="/jquery-3.7.1.min.js"></script>
+	<script src="/datatables.min.js"></script>
+	<link href="/datatables.min.css" rel="stylesheet">
+	<link href="/main.css" rel="stylesheet">
 </head>
-<body class="markdown-body">
-	<header>
-		<div id="header-container">
-			<img height="100" src="/logo.png">
-			<div id="header-text">
-				<h1><a href="/">matelab</a></h1>
-				<hp>The Swiss Mate Index</hp>
+<body>
+	<main>
+		<header>
+			<div id="header-left">
+				<img id="header-image" src="/logo_transparent.png">
+				<div>
+					<h1><a href="/">matelab</a></h1>
+					<p>The Swiss Mate Index</p>
+				</div>
 			</div>
-		</div>
-	</header>
+			<div id="nav-menu">
+				<a class="nav-link active" href="/">Basic</a>
+				<a class="nav-link" href="/more.html">Details</a>
+				<a class="nav-link" href="https://github.com/rtfmkiesel/matelab" target="_blank">
+					<!-- https://ionic.io/ionicons -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/></svg>
+				</a>
+			</div>
+			<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Detect page for nav menu highlighting
+				const currentPath = window.location.pathname;
+				const navLinks = document.querySelectorAll('.nav-link');
+				
+				navLinks.forEach(link => {
+					link.classList.remove('active');
+					
+					if (currentPath === '/' && link.getAttribute('href') === '/') {
+						link.classList.add('active');
+					} else if (currentPath.includes('/more.html') && link.getAttribute('href') === '/more.html') {
+						link.classList.add('active');
+					}
+				});
+
+				// Apply dark mode to data tables
+				// https://datatables.net/manual/styling/dark-mode#Auto-detection
+				let prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				let html = document.querySelector('html');
+				
+				html.classList.add(prefers);
+				html.setAttribute('data-bs-theme', prefers);
+			});
+		</script>
+		</header>

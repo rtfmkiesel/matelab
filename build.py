@@ -16,32 +16,38 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "data")
 
 
 def round2(number):
+    """
+    Rounds a number to two decimal places
+    """
     return "{:.2f}".format(number)
 
 
 def prepare_output_dir():
-    # remove previously rendered pages
+    """
+    Removes old builds, creates the new directory and copies over all static assets
+    """
     if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR)
 
-    # create new dir
     os.mkdir(OUTPUT_DIR)
     os.mkdir(f"{OUTPUT_DIR}/products")
 
-    # Copy over static assets
     for file in glob.iglob(f"{SCRIPT_DIR}/static/*"):
         shutil.copy(file, OUTPUT_DIR)
 
 
 def render_products(env: jinja2.Environment, render_drafts: bool):
+    """
+    Renders all products in ./data to their individual pages
+    """
     print("[+] Rendering products")
     products = []
     product_template = env.get_template("product.jinja2")
 
-    # process every ./products/product.yaml file
+    # process every ./data/*.yaml/yml file
     product_filepaths = glob.glob(f"{DATA_DIR}/*.yml") + glob.glob(f"{DATA_DIR}/*.yaml")
+
     for product_filepath in product_filepaths:
-        # convert yaml to dict
         with open(product_filepath) as product_raw:
             product_yaml = yaml.safe_load(product_raw)
 
@@ -51,10 +57,6 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
             )
             continue
 
-        # if the draft flag on a file is set, add * to the beginning of the product name
-        if product_yaml["draft"] == True:
-            product_yaml.update({"product": (f"*{product_yaml['product']}")})
-
         # escape special chars from the filenames and
         # make lowercase to generate the url, ex. brand_product_packaging.html
         site_url = re.sub(
@@ -62,22 +64,19 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
             "_",
             f"{product_yaml['brand']}_{product_yaml['product']}_{product_yaml['packaging']}_{product_yaml['size']}.html",
         ).lower()
-        # adding the "insite url" to product
         product_yaml.update({"siteurl": site_url})
 
         # average price
         product_prices = 0
         for store in product_yaml["stores"]:
-            # add the price of one unit to the total
-            product_price1u = store["price"] / store["amount"]  # single unit
+            product_price1u = (
+                store["price"] / store["amount"]
+            )  # only take a single unit
             product_prices += product_price1u
-            # add the price per one unit
             store.update({"price1u": round2(product_price1u)})
-            # update value to be string with two decimal points
             store.update({"price": round2(store["price"])})
 
         product_averageprice = product_prices / len(product_yaml["stores"])
-        # add average price to product
         product_yaml.update({"averageprice": round2(product_averageprice)})
 
         # price100ml
@@ -96,19 +95,19 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
         product_yaml.update(
             {
                 "sugar1mgcaffeine": "0",
-                #"caffeine1gsugar": "0",
+                "caffeine1gsugar": "0",
                 "sugartotal": "0",
             }
         )
-        # sugar can be zero
+
         if product_yaml["sugar"] != 0:
             # sugar1mgcaffeine
             product_sugar1mgcaffeine = product_yaml["sugar"] / product_yaml["caffeine"]
             product_yaml.update({"sugar1mgcaffeine": round2(product_sugar1mgcaffeine)})
 
             # caffeine1gsugar
-            #product_caffeine1gsugar = product_yaml["caffeine"] / product_yaml["sugar"]
-            #product_yaml.update({"caffeine1gsugar": round2(product_caffeine1gsugar)})
+            product_caffeine1gsugar = product_yaml["caffeine"] / product_yaml["sugar"]
+            product_yaml.update({"caffeine1gsugar": round2(product_caffeine1gsugar)})
 
             # total sugar in product
             product_sugartotal = product_yaml["sugar"] * (product_yaml["size"] / 100)
@@ -118,33 +117,55 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
 
         # render product page brand_product_packaging.html
         with open(f"{OUTPUT_DIR}/products/{site_url}", "w") as product_out:
-            product_out.write(product_template.render(item=product_yaml))
+            product_out.write(
+                product_template.render(
+                    item=product_yaml,
+                    now=datetime.datetime.utcnow,
+                )
+            )
 
     print(f"[+] Rendererd {len(products)} products")
     return products
 
 
 def render_index(env: jinja2.Environment, products: Iterable[Dict]):
+    """
+    Renders the main/landing/index page
+    """
+
     print("[+] Rendering 'index.html'")
     main_template = env.get_template("main.jinja2")
 
-    # render index.html
     with open(f"{OUTPUT_DIR}/index.html", "w") as main_out:
         main_out.write(
             main_template.render(
                 products=products,
+                now=datetime.datetime.utcnow,
             )
         )
 
 
 def render_more(env: jinja2.Environment, products: Iterable[Dict]):
+    """
+    Renders the more.html page
+    """
+
     print("[+] Rendering 'more.html'")
     more_template = env.get_template("more.jinja2")
     with open(f"{OUTPUT_DIR}/more.html", "w") as more_out:
-        more_out.write(more_template.render(products=products))
+        more_out.write(
+            more_template.render(
+                products=products,
+                now=datetime.datetime.utcnow,
+            )
+        )
 
 
 def render_sitemap(env: jinja2.Environment, urls: Iterable[str]):
+    """
+    Renders the sitemap.xml
+    """
+
     print("[+] Rendering 'sitemap.xml'")
     sitemap_template = env.get_template("sitemap.jinja2")
     with open(f"{OUTPUT_DIR}/sitemap.xml", "w") as sitemap_out:
@@ -157,18 +178,25 @@ def render_sitemap(env: jinja2.Environment, urls: Iterable[str]):
 
 
 def gather_sitemap_urls():
+    """
+    Returns a array of URL to include in the sitemap.
+    Called after rendering all other pages
+    """
+
     return [
-        "https://matelab.ch/" + fpath[len(OUTPUT_DIR)+1:]
+        "https://matelab.ch/" + fpath[len(OUTPUT_DIR) + 1 :]
         for fpath in sorted(glob.glob(f"{OUTPUT_DIR}/**/*.html", recursive=True))
     ]
 
 
 def main(args):
     prepare_output_dir()
+
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(f"{SCRIPT_DIR}/templates/"))
     products = render_products(env, render_drafts=args.drafts)
     render_more(env, products)
     render_index(env, products)
+
     urls = gather_sitemap_urls()
     render_sitemap(env, urls=urls)
 

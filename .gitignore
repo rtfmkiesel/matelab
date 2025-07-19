@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/virtualenv,python,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=virtualenv,python,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,virtualenv
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,virtualenv
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -167,6 +167,11 @@ cython_debug/
 # Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
 
+# ruff
+.ruff_cache/
+
+# LSP config files
+pyrightconfig.json
 
 ### VirtualEnv ###
 # Virtualenv
@@ -181,7 +186,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 ### VisualStudioCode ###
-.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -200,7 +204,7 @@ pip-selfcheck.json
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/virtualenv,python,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,virtualenv
 
 # custom
 output/

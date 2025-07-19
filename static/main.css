@@ -6,84 +6,214 @@
 	font-display: swap;
 }
 
-:root {
-	--foreground: #111;
-	--background: #fdfdfd;
-	--accent: #ff0000;
+* {
+	padding: 0;
+	margin: 0;
+	min-width: 0;
+	box-sizing: border-box;
 }
+
+:root {
+	--fg: #111;
+	--fg-dull: #6b6b6b;
+	--bg: #fdfdfd;
+	--accent: #ff0000;
+	--border: #a5a5a5;
+
+	--space-default: 1.25rem;
+	--space-half: calc(var(--space-default) / 2);
+	--space-double: calc(var(--space-default) * 2);
+
+	--site-max-width: 90rem;
+
+	--fs-large: 2em;
+	--fs-regular: 1.1em;
+	--fs-small: 0.9em;
+	--border-radius: 6px;
+}
+
+/* general layout */
 
 html {
 	font-family: "Roboto Mono", monospace;
-	padding: 3em 1em;
-	margin: auto;
-	line-height: 1.75;
-	font-size: 1.25em;
-	color: var(--foreground);
-	background-color: var(--background);
+	font-size: var(--fs-regular);
+	line-height: 1.6;
+	color: var(--fg);
+	background: var(--bg);
 }
 
 body {
-	max-width: 95%;
-	margin: 0 auto;
+	padding: var(--space-default);
 }
 
 header {
-	margin: 0 auto 2em auto;
-}
-
-#header-container,
-#header-text {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--border);
+	padding-bottom: var(--space-half);
+	margin-bottom: var(--space-double);
 }
 
-#header-text {
-	font-size: medium;
-	flex-direction: column;
-	margin-left: 1em;
+footer {
+	color: var(--fg-dull);
+	font-size: var(--fs-small);
+	margin: var(--space-double) 0;
 }
 
-#header-text h1 {
-	margin: 0;
+main {
+	max-width: var(--site-max-width);
+	margin: 0 auto;
 }
 
-table {
-	width: 100%;
-	border: 1px solid var(--foreground);
+h1,h2,h3,h4 {
+	margin: var(--space-double) 0;
 }
 
-th,
-td {
-	border: 1px solid var(--foreground);
-	padding: 5px;
-	text-align: left;
-}
-
-tbody tr:hover {
-	background-color: #f5f5f5;
+ul,ol {
+	margin-left: var(--space-double);
 }
 
 a,
 a:active {
-	color: var(--foreground);
+	color: var(--fg);
 	text-decoration: underline;
 	text-decoration-color: var(--accent);
+	transition: all 0.1s ease;
 }
 
 a:hover {
-	text-decoration-color: var(--foreground);
+	text-decoration-color: var(--fg);
 }
 
-.hscroll {
-	overflow-x: auto;
+.discontinued,
+.discontinued a {
+	color: var(--fg-dull);
+	opacity: 0.75;
 }
 
-/* mobile view */
+/* header stuff */
+
+#header-image {
+	max-width: 60px;
+	height: auto;
+}
+
+#header-left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: var(--space-default);
+}
+
+#header-left h1 {
+	margin: 0;
+	font-size: var(--fs-large);
+}
+
+#header-left p {
+	color: var(--fg-dull);
+	font-size: var(--fs-small);
+}
+
+#nav-menu {
+	display: flex;
+}
+
+.nav-link {
+	font-size: var(--fs-small);
+	color: var(--fg);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid var(--border);
+	border-radius: var(--border-radius);
+
+	transition: all 0.1s ease;
+
+	text-decoration: none;
+
+	margin-left: 0.5rem;
+	padding: var(--space-half) var(--space-default);
+}
+
+.nav-link:hover,
+.nav-link.active {
+	text-decoration: none;
+	border-color: var(--accent);
+}
+
+.nav-link svg {
+	fill: var(--fg);
+	margin: 0 var(--space-half);
+	height: auto;
+	min-width: 25px;
+	max-width: 25px;
+}
+
+/* datatables */
+
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+	margin-left: 0;
+	margin-bottom: var(--space-half);
+}
+
+/* product page */
+
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: var(--space-default);
+	margin: var(--space-default) 0;
+}
+
+.stat-card {
+	text-align: center;
+	border: 1px solid var(--border);
+	border-radius: var(--border-radius);
+	padding: var(--space-default);
+}
+
+.stat-card h4 {
+	margin: 0;
+}
+
+.stat-card .value {
+	color: var(--accent);
+}
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--fg: #d1d0d0;
+		--fg-dull: #888;
+		--bg: #111;
+		--accent: #00ff00;
+		--border: #ddd;
+	}
+}
+
+/* mobile */
+
 @media only screen and (max-width: 767px) {
-	html {
-		font-size: 1.1em;
+	:root {
+		--fs-large: 1.5em;
+		--fs-regular: 0.9em;
+		--fs-small: 0.75em;
+	}
+
+	header {
+		flex-direction: column;
+		gap: var(--space-default);
+	}
+
+	div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+		text-align: left;
 	}
 }
