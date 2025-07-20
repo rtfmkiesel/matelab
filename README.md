@@ -14,7 +14,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
   <img src="https://contrib.rocks/image?repo=rtfmkiesel/matelab" />
 </a>
 
-<br>
+<br><br>
 
 Special thanks to [SigristFabian](https://x.com/SigristFabian) and [volerysandro](https://x.com/volerysandro) for helping with the initial site and data.
 
