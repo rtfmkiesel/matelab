@@ -1,0 +1,17 @@
+draft: true
+brand: "Freeway"
+product: "Mate Ginger"
+size: 330
+packaging: "Can"
+caffeine: FIXME
+sugar: FIXME
+ingredients:
+    - "FIXME"
+stores:
+    -
+        name: "Lidl"
+        url: "https://sortiment.lidl.ch/de/catalog/product/view/id/20205"
+        price: 0.99
+        amount: 1
+        date: 2025-09-13
+        comment: "-"
