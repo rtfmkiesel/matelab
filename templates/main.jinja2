@@ -19,7 +19,7 @@
 						{{ item["brand"] }} {{ item["product"] }}
 					</a>
 					<div>
-						{{ item["size"] }}ml {{ item["packaging"] }}{% if item.discontinued %}; No longer available{% endif %}
+						{{ item["size"] }}ml ({{ item["packaging"] }}){% if item.discontinued %}; No longer available{% endif %}
 					</div>
 				</td>
 				<td class="numeric">{{ item["caffeine"] }}</td>
