@@ -3,10 +3,15 @@ brand: "Freeway"
 product: "Mate Mint"
 size: 330
 packaging: "Can"
-caffeine: FIXME
-sugar: FIXME
+caffeine: 23
+sugar: 5.5
 ingredients:
-    - "FIXME"
+    - "Aufguss aus Mate (Wasser, Mate, Pfefferminze)"
+    - "Zucker"
+    - "Zitronensaft aus Konzentrat"
+    - "Kohlensäure"
+    - "Guaranaextrakt"
+    - "Säuerungsmittel: Citronensäure, Natürliches Aroma"
 stores:
     -
         name: "Lidl"
