@@ -152,8 +152,8 @@ a:hover {
 	fill: var(--fg);
 	margin: 0 var(--space-half);
 	height: auto;
-	min-width: 25px;
-	max-width: 25px;
+	min-width: 20px;
+	max-width: 20px;
 }
 
 /* datatables */

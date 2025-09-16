@@ -76,6 +76,12 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
             store.update({"price1u": round2(product_price1u)})
             store.update({"price": round2(store["price"])})
 
+        newest_update = datetime.date(1970, 1, 1)
+        for store in product_yaml["stores"]:
+            if store["date"] > newest_update:
+                newest_update = store["date"]
+        product_yaml["newest_update"] = newest_update
+
         product_averageprice = product_prices / len(product_yaml["stores"])
         product_yaml.update({"averageprice": round2(product_averageprice)})
 
@@ -177,6 +183,27 @@ def render_sitemap(env: jinja2.Environment, urls: Iterable[str]):
         )
 
 
+def render_rss(env: jinja2.Environment, products: Iterable[Dict]):
+    """
+    Renders the RSS feed
+    """
+
+    print("[+] Rendering 'feed.xml'")
+    rss_template = env.get_template("rss.jinja2")
+
+    sorted_products = sorted(
+        products, key=lambda product: product["newest_update"], reverse=True
+    )
+
+    with open(f"{OUTPUT_DIR}/feed.xml", "w") as rss_out:
+        rss_out.write(
+            rss_template.render(
+                products=sorted_products,
+                now=datetime.datetime.utcnow,
+            )
+        )
+
+
 def gather_sitemap_urls():
     """
     Returns a array of URL to include in the sitemap.
@@ -199,6 +226,7 @@ def main(args):
 
     urls = gather_sitemap_urls()
     render_sitemap(env, urls=urls)
+    render_rss(env, products)
 
 
 if __name__ == "__main__":
