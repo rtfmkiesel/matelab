@@ -4,7 +4,10 @@ product: "mate zero"
 size: 330
 packaging: Can
 caffeine: 22
-sugar: 0.5
+
+# Technically it has 0.5g/100ml, but this spoils the "fight" against other 0 sugar products
+sugar: 0 
+
 ingredients:
     - "Wasser"
     - "Kohlensäure"
