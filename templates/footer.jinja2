@@ -1,5 +1,5 @@
 	<footer>
-		<p>Built {{ now().strftime("%Y-%m-%d %H:%M:%S") }} (UTC); {{ products|length }} products indexed</p>
+		<p>Built {{ now().strftime("%Y-%m-%d %H:%M:%S") }} (UTC){% if products|length > 1 %}; {{ products|length }} products indexed{% endif %}</p>
 	</footer>
 	</main>
 </body>
