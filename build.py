@@ -121,6 +121,9 @@ def render_products(env: jinja2.Environment, render_drafts: bool):
 
         products.append(product_yaml)
 
+        # add the filename to the struct for the "Open on GitHub" link
+        product_yaml["filename"] = os.path.basename(product_filepath)
+
         # render product page brand_product_packaging.html
         with open(f"{OUTPUT_DIR}/products/{site_url}", "w") as product_out:
             product_out.write(
