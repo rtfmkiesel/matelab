@@ -154,22 +154,6 @@ def render_index(env: jinja2.Environment, products: Iterable[Dict]):
         )
 
 
-def render_more(env: jinja2.Environment, products: Iterable[Dict]):
-    """
-    Renders the more.html page
-    """
-
-    print("[+] Rendering 'more.html'")
-    more_template = env.get_template("more.jinja2")
-    with open(f"{OUTPUT_DIR}/more.html", "w") as more_out:
-        more_out.write(
-            more_template.render(
-                products=products,
-                now=datetime.datetime.utcnow,
-            )
-        )
-
-
 def render_sitemap(env: jinja2.Environment, urls: Iterable[str]):
     """
     Renders the sitemap.xml
@@ -224,7 +208,6 @@ def main(args):
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(f"{SCRIPT_DIR}/templates/"))
     products = render_products(env, render_drafts=args.drafts)
-    render_more(env, products)
     render_index(env, products)
 
     urls = gather_sitemap_urls()

@@ -1,14 +1,72 @@
 {% include "header.jinja2" %}
 
+<div class="mobileonly">
+	<p>Not designed for small screens ¯\_(ツ)_/¯</p>
+</div>
+
+<div>
+	<label for="search-input">Search:</label>
+	<input type="search" id="search-input" placeholder="" aria-controls="data-table">
+</div>
+
+<details closed="">
+	<summary>Select Columns</summary>
+	<div class="column-controls">
+		<div class="column-grid">
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="1" checked>
+				<span class="column-toggle-label">Avg Price</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="3" checked>
+				<span class="column-toggle-label">Caffeine (mg/100ml)</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="5">
+				<span class="column-toggle-label">Caffeine per Sugar</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="4" checked>
+				<span class="column-toggle-label">Caffeine Total</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="6">
+				<span class="column-toggle-label">Price per Caffeine</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="2" checked>
+				<span class="column-toggle-label">Price per 100ml</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="7" checked>
+				<span class="column-toggle-label">Sugar (g/100ml)</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="9">
+				<span class="column-toggle-label">Sugar per Caffeine</span>
+			</label>
+			<label class="column-toggle">
+				<input type="checkbox" class="toggle-column" data-column="8" checked>
+				<span class="column-toggle-label">Sugar Total</span>
+			</label>
+		</div>
+	</div>
+</details>
+
 <div class="table-container">
-	<table id="main-table" class="display compact">
+	<table id="data-table" class="display compact">
 		<thead>
 			<tr>
 				<th>Product</th>
+				<th class="numeric">Avg Price<br><small>(CHF)</small></th>
+				<th class="numeric">Price/100ml<br><small>(CHF)</small></th>
 				<th class="numeric">Caffeine<br><small>(mg/100ml)</small></th>
 				<th class="numeric">Caffeine Total<br><small>(mg)</small></th>
+				<th class="numeric">Caffeine/1g Sugar<br><small>(mg)</small></th>
+				<th class="numeric">Price/1mg Caffeine<br><small>(CHF)</small></th>
 				<th class="numeric">Sugar<br><small>(g/100ml)</small></th>
 				<th class="numeric">Sugar Total<br><small>(g)</small></th>
+				<th class="numeric">Sugar/1mg Caffeine<br><small>(g)</small></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -22,10 +80,15 @@
 						{{ item["size"] }}ml ({{ item["packaging"] }}){% if item.discontinued %}; No longer available{% endif %}
 					</div>
 				</td>
+				<td class="numeric">{{ item["averageprice"] }}</td>
+				<td class="numeric">{{ item["price100ml"] }}</td>
 				<td class="numeric">{{ item["caffeine"] }}</td>
 				<td class="numeric">{{ item["caffeinetotal"] }}</td>
+				<td class="numeric">{{ item["caffeine1gsugar"] }}</td>
+				<td class="numeric">{{ item["price1mgcaffeine"] }}</td>
 				<td class="numeric">{{ item["sugar"] }}</td>
 				<td class="numeric">{{ item["sugartotal"] }}</td>
+				<td class="numeric">{{ item["sugar1mgcaffeine"] }}</td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -34,16 +97,38 @@
 
 <script>
 $(document).ready(function() {
-	$('#main-table').DataTable({
+	var table = $('#data-table').DataTable({
 		order: [[0, 'asc']], // sort by name by default
 		columnDefs: [
-			{ targets: [1, 2, 3, 4], className: 'numeric' }
+			{ targets: [1, 2, 3, 4, 5, 6, 7, 8, 9], className: 'numeric' },
+			// Hide certain columns by default
+			{ targets: [3, 5, 6, 8, 9], visible: false }
 		],
 		scrollX: true,
 		paging: false,
 		bInfo: false,
-		language: {
-			search: "Search:",
+		searching: true,
+		layout: {
+			topEnd: null, // Hide search bar
+		},
+	});
+
+	// Handle searches
+	$('#search-input').on('keyup', function () {
+		table.search(this.value).draw();
+	});
+
+	// Handle column visibility toggles
+	$('.toggle-column').on('change', function() {
+		var column = table.column($(this).data('column'));
+		column.visible($(this).is(':checked'));
+	});
+
+	// Set initial checkbox states based on column visibility
+	table.columns().every(function(index) {
+		if (index > 0) { // Skip product column
+			var checkbox = $('.toggle-column[data-column="' + index + '"]');
+			checkbox.prop('checked', this.visible());
 		}
 	});
 });
